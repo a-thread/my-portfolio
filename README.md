@@ -4,7 +4,7 @@
 
 ![Image of Start Screen](./public/images/preview.png)
 
-### Link to Portfolio: [a-thread.codes](https://a-thread.codes)
+<!-- ### Link to Portfolio: [a-thread.codes](https://a-thread.codes) -->
 
 ## Description
 
