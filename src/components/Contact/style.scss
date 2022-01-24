@@ -1,0 +1,47 @@
+@import '../../design-tokens/scss-variables.scss';
+#contact {
+    background-color: var(--color-additional);
+    
+    h3 {
+        text-align: right;
+        margin-top: 0;
+        color: white;
+    }
+
+    div.contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        font-family: "Open Sans", sans-serif;
+        max-width: 50vw;
+
+        @media screen and (max-width: 900px) {
+            max-width: 80vw;
+        }
+
+        a.contact-item {
+            align-items: flex-start;
+            list-style-type: none;
+            color: white;
+            font-size: large;
+            padding: .5rem;
+            
+            @media screen and (max-width: 300px) {
+                font-size: 6vw;
+                overflow-wrap: break-word;
+                padding: 0;
+            }
+
+            &:hover {
+                color: var(--color-secondary);
+            }
+
+            i.fas,
+            i.fab {
+                margin: 5px;
+                font-size: larger;
+            }
+        }
+    }
+}

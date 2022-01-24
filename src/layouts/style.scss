@@ -1,0 +1,99 @@
+@import '../design-tokens/scss-variables.scss';
+
+// Portfolio Page
+div.project-container {
+    background-color: var(--color-additional);
+    padding-bottom: .25rem;
+
+    header {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            align-self: flex-end;
+            text-align: center;
+            color: var(--color-primary);
+        }
+    }
+
+    article.portfolio-item {
+        padding: 0 2rem;
+        display: flex;
+        margin: 2vh 10vw;
+        border-radius: 5px;
+
+        &:nth-of-type(odd) {
+            flex-direction: row-reverse;
+            text-align: right;
+            background-color: var(--color-primary);
+            opacity: 75%;
+
+
+            h2 {
+                text-align: center;
+                color: var(--color-additional)
+            }
+
+            div.text {
+                padding-left: 2vw;
+            }
+
+            button {
+                background-color: var(--color-secondary);
+            }
+        }
+
+        &:nth-of-type(even) {
+            background-color: var(--color-secondary);
+            opacity: 85%;
+
+            h2 {
+                color: var(--color-additional);
+            }
+
+            div.text {
+                padding-right: 2vw;
+            }
+
+            button {
+                background-color: #bde8f2;
+                opacity: 75%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+
+        article.portfolio-item {
+            display: flex;
+            flex-direction: column;
+
+            h1,
+            h2 {
+                text-align: center;
+            }
+
+            &:nth-of-type(odd) {
+                flex-direction: column;
+
+                div.text {
+                    padding-right: 0;
+                }
+            }
+
+            &:nth-of-type(even) {
+                div.text {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        article.portfolio-item {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            margin: 20px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@import '../../design-tokens/scss-variables.scss';
+
+nav {
+    background-color: var(--color-additional);
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #basic-navbar-nav > div > a {
+        font-weight: 500;
+        color: var(--color-primary);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.selected {
+            color: var(--color-secondary)
+        }
+
+        @media screen and (max-width: 992px) {
+            &:first-child {
+                margin-top: 10px;
+            }
+            margin-right: 0;
+            text-align: right;
+        }
+    }
+}

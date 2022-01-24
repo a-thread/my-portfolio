@@ -1,0 +1,89 @@
+div.skillsContainer {
+    padding: 1rem 1rem 4rem 1rem;
+
+    h3 {
+        text-align: center;
+        margin: 20px 0 50px 0;
+        color: var(--color-additional);
+
+        @media screen and (min-width: 800px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    div.skillsSection {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 5rem 0;
+        justify-content: center;
+
+        &:first-of-type {
+            padding: 0;
+
+            div {
+                border-bottom: solid 5px var(--color-secondary)
+            }
+        }
+
+        div {
+            width: 25rem;
+            text-align: center;
+            padding: 1rem;
+
+            h4 {
+                color: var(--color-additional);
+                font-size: 25px;
+                padding: 0;
+                margin: 10px;
+            }
+
+            &:first-of-type {
+                border-right: solid 5px var(--color-secondary);
+
+                @media screen and (max-width: 500px) {
+                    border-right: none;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+        }
+
+        span {
+            font-size: 50px;
+            padding: 10px;
+            color: var(--color-primary)
+        }
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            align-items: center;
+            max-width: 90vw;
+
+            div {
+                width: 100%;
+                padding: 0;
+                border-bottom: solid 5px var(--color-secondary);
+
+                &:nth-of-type(2) {
+                    border-bottom: solid 5px var(--color-secondary);
+                }
+
+                &.soft {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}

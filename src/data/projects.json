@@ -1,0 +1,97 @@
+[{
+        "id": 8,
+        "key": 8,
+        "title": "Safe Space",
+        "image": "https://i.ibb.co/CwgXLrP/safe-space.png",
+        "description": "Safe Space offers a unique platform that helps the LGBTQ community safely expand their orbit by connecting members with resources, businesses and community. With Safe Space, members are able to securely and swiftly login with a social media account or email and password to access a database of trusted businesses and community organizations",
+        "email": "email@address.com",
+        "password": "Password123",
+        "tech": "Angular, NestJS, Heroku, Auth0, Balsamiq, Material, Axios, dotenv, TSLint, SCSS, Google G Suite, Canva, TypeORM, nodemon, MongoDB, Postman, Trello ",
+        "github": "https://github.com/a-thread/safe-space/",
+        "deployed": "https://safe-space-ne.herokuapp.com/"
+    },
+    {
+        "id": 7,
+        "key": 7,
+        "title": "Ascent: Sobriety App",
+        "email": "email@address.com",
+        "password": "password",
+        "image": "https://i.ibb.co/17mXtQg/ascent.png",
+        "description": "Ascent is a sobriety tool that helps members track their daily mood & thoughts as well as various lengths of sobriety. In a time where more and more people are living sober lifestyles, this app caters to those who are seeking to track continuous time as well as discontinuous time.",
+        "tech": "Express, Sequelize, MySQL, CORS, Nodemailer, Passport, Express-Handlebars, Moment, ApexCharts, Bootstrap, Canva, and Frontify.",
+        "github": "https://github.com/a-thread/ascent-sobriety/",
+        "deployed": "https://ascent-sobriety.herokuapp.com/"
+    },
+    {
+        "id": 6,
+        "key": 6,
+        "title": "React Team Directory",
+        "email": "",
+        "password": "",
+        "image": "https://i.ibb.co/qNtvq51/directory.png",
+        "description": "Team Directory is an application built in Typescript and powered by React that enables the user to view, search and sort their employees by id, first name, last name, cell number and email. The directory also shows a photo of each employee so that employees can familiarize themselves with the team.",
+        "tech": "React, Typescript, Material-UI, Express, Axios, WebPack, Google Fonts, Font Awesome, PostMan",
+        "github": "https://github.com/a-thread/react-team-directory",
+        "deployed": "https://a-thread.github.io/react-team-directory/"
+    },
+    {
+        "id": 5,
+        "key": 5,
+        "title": "Personal Trainer App",
+        "email": "",
+        "password": "",
+        "image": "https://i.ibb.co/5YmRpYL/personal-trainer.png",
+        "description": "Personal Trainer is a web application that that helps consumers reach their fitness goals by tracking their workout progress. Exercises are shown in two line graphs and two pie charts with each exercise shown below, all divided into two categories All Exercises and Pounds Lifted.",
+        "tech": "MongoDB, MongoDB Atlas, Express, Mongoose, Dotenv, Nodemon",
+        "github": "https://github.com/a-thread/personal-trainer/",
+        "deployed": "https://lets-workout.herokuapp.com/"
+    },
+    {
+        "id": 4,
+        "key": 4,
+        "title": "Eat-Ma-Burgers",
+        "email": "",
+        "password": "",
+        "image": "https://i.ibb.co/1brCPxT/burger.png",
+        "description": "Eat-Ma-Burgers is a restaurant app that lets users input the names of burgers they'd like to eat. When the user inputs a burger name, it is displayed on the left side, under `Burgers to Eat` with buttons enabling the user to Try it! or Delete it if they don't like it. When the user clicks Try it! the burger is moved to the right side, under `Already Sampled.`",
+        "tech": "Express, Sequelize, MySQL, CORS, Nodemailer, Passport, Express-Handlebars, Moment, ApexCharts, Bootstrap, Canva, and Frontify.Node.js, Express.js, Express Handlebars, MySQL2, Postman",
+        "github": "https://github.com/a-thread/eat-ma-burgers",
+        "deployed": "https://eat-ma-burgers.herokuapp.com/"
+    },
+    {
+        "id": 3,
+        "key": 3,
+        "title": "MySQL Team Bank",
+        "email": "",
+        "password": "",
+        "image": "https://i.ibb.co/bPgnzht/team.png",
+        "description": "MySQL Team Bank is a command-line application that allows the user to add, view & remove departments, roles and employees as well as update employee roles and managers. The user is also able to view employees by manager and view the total budget of each department.",
+        "tech": "Node.js, npm, InquirerJs, Console-Table-Printer, MySQL, HeidiSQL",
+        "github": "https://github.com/a-thread/MySQL-Team-Bank",
+        "deployed": "https://www.youtube.com/watch?v=iO6c0jbuMZc&feature=youtu.be"
+    },
+    {
+        "id": 1,
+        "key": 1,
+        "title": "Ultimate Markdown Generator",
+        "email": "",
+        "password": "",
+        "image": "https://i.ibb.co/bXcbTs1/md.png",
+        "description": "This is a command-line application that generates an organized and professional markdown. Using prompts in the terminal, the Ultimate Markdown Generator creates a README from user input that includes a title, as well as sections for a description, table of contents, installation, usage, technologies used, tests, contributing, and questions.",
+        "tech": "Javascript, Node.js, npm, InquirerJs",
+        "github": "https://github.com/a-thread/Ultimate-Markdown-Generator",
+        "deployed": "https://www.youtube.com/watch?v=4LwsgW0qiF0&feature=youtu.be"
+    },
+    {
+        "id": 2,
+        "key": 2,
+        "title": "WeatherDash",
+        "email": "",
+        "password": "",
+        "image": "https://i.ibb.co/kJX0DJk/weather-Dash.png",
+        "description": "weatherDash is a Weather App that displays current weather data as well as a five day forecast for any location your heart desires!",
+        "tech": "HTML, CSS, Material, JavaScript, jQuery, Moment.js, OpenWeatherApi, Canva",
+        "github": "https://github.com/a-thread/Weather-API-Aiden",
+        "deployed": "https://a-thread.github.io/weatherDash/"
+    }
+]
