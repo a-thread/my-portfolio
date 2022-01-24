@@ -9,10 +9,11 @@ nav {
 
     #basic-navbar-nav > div > a {
         font-weight: 500;
-        color: var(--color-primary);
+        font-size: 1.25em;
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-right: 20px;
+        color: var(--color-primary);
 
         &:last-child {
             margin-right: 0;

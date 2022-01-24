@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import "./style.scss";
+import React, { Component } from 'react';
+import './style.scss';
 
 export default class Bio extends Component {
     render() {
         return (
-            <div className="about-me" id="bio">
-                <h3 className="about-title blue">BIO</h3>
+            <div className='about-me' id='bio'>
+                <h3 className='about-title blue'>BIO</h3>
 
                 <article>
-                    <p className="bio-content">
+                    <p className='bio-content'>
                         Full Stack Engineer with 3+ years of hands on experience designing, building, and implementing applications
                         using a wide range of technologies and programming languages. Check out my projects page to see a few of my 
                         personal projects!

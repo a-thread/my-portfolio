@@ -97,3 +97,19 @@ div.project-container {
         }
     }
 }
+
+// Resume Page
+.resume-container {
+    background-color: var(--color-primary);
+
+    button.resume {
+        min-width: 8rem;
+        margin: 0 20px 10px 20px;
+        background-color: var(--color-secondary);
+        
+        &:hover {
+            color:white;
+            background-color: var(--color-additional);
+        }
+      }
+}
