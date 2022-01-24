@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Card } from "react-bootstrap";
 import "./style.scss";
 
 export default class Skills extends Component {
