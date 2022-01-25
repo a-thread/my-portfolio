@@ -10,8 +10,8 @@ export default function Navigation() {
     return (
         <Navbar className='bg-additional py-2 px-3 m-0 w-100' expand='lg'>
             <Navbar.Brand href='/'>
-                <h1 className='text-blue'>
-                    <span className='text-green'>a-</span>
+                <h1 className='text-green'>
+                    <span className='text-blue'>a-</span>
                     thread
                 </h1>
             </Navbar.Brand>

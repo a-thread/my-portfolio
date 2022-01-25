@@ -13,9 +13,9 @@ export default class PortfolioPage extends Component {
         return (
             <>
                 <Navigation />
-                <div className='project-container bg-additional pb-2'>
-                    <header className='text-center d-flex justify-content-center'>
-                        <h1 className='text-blue text-center'>Recent Projects</h1>
+                <div className='project-container bg-additional p-2'>
+                    <header className='d-flex justify-content-center'>
+                        <h1 className='text-green text-center'>Recent Projects</h1>
                     </header>
                     <div className='portfolio'>
                         {data.map((project: IProject) => {
