@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';

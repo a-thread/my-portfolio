@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from "react";
 import data from '../utils/data/projects.json';
 import PortCard from '../components/PortCard';
 import './style.scss';

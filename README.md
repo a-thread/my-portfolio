@@ -2,13 +2,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-![Image of Start Screen](./public/images/preview.png)
-
-<!-- ### Link to Portfolio: [a-thread.codes](https://a-thread.codes) -->
-
 ## Description
 
-This is a simple and fun portfolio built with TypeScript and React. It contains a short bio, an abreviated list of skills as well as information on recent projects. A resume has also been included for the viewer's convenience!
+My portfolio website built with TypeScript and React. It contains a short bio, resume, an abreviated list of skills as well as information on recent projects. Theres also a fun dark mode option!
+### Check it Out:  [a-thread.codes](https://a-thread.codes)
+
+### Images of Home Screen
+
+![Image of Home Page in Color](./public/images/color-homepage.png)
+![Image of Home Page in Contrast Tones](./public/images/contrast-homepage.png)
 
 ### Tools/Technologies Used
 

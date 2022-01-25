@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import { IProject } from './project.model';
 import './style.scss';

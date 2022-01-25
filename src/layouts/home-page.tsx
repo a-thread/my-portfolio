@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from "react";
 import Feedback from 'react-bootstrap/esm/Feedback';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';

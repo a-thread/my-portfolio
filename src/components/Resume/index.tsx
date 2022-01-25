@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { Card, Container } from "react-bootstrap";
 export default class Resume extends Component {
   render() {
