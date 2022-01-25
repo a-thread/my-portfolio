@@ -1,6 +1,5 @@
 @import '../../design-tokens/scss-variables.scss';
 #contact {
-    background-color: var(--color-additional);
     
     h3 {
         text-align: right;
@@ -34,7 +33,7 @@
             }
 
             &:hover {
-                color: var(--color-secondary);
+                color: var(--color-secondary-light);
             }
 
             i.fas,

@@ -4,7 +4,7 @@ import './style.scss';
 export default class Contact extends Component {
     render() {
         return (
-            <div id='contact'>
+            <div id='contact' className='bg-additional'>
                 <h3 className='title'>Contact</h3>
 
                 <article>

@@ -6,13 +6,13 @@ export default class Resume extends Component {
       <Container className="pb-3">
         <Card className="h-100 shadow p-3">
           <Card.Body>
-            <header className="d-flex justify-content-between mb-3">
-              <div>
+            <header className="row d-flex justify-content-between mb-3">
+              <div className="col-12 col-sm-8">
                 <h1 className="text-black">Aiden Threadgoode</h1>
                 <h4>Full-Stack Engineer</h4>
                 <h6><i>pronouns: he/him</i></h6>
               </div>
-              <div>
+              <div className="col-12 col-sm-4">
                 <h6>Phone: 207-749-1341</h6>
                 <h6>Email: aiden.threadgoode@gmail.com</h6>
                 <h6>Portfolio: a-thread.codes</h6>
@@ -47,10 +47,10 @@ export default class Resume extends Component {
                     <h5>KeHE Distributors - Frontend Software Engineer</h5>
                     <h6>Remote | Feb 2021 - present</h6>
                   </div>
-                  <p className="col-12">
+                  <div className="col-12">
                     Builds out new features, supports existing software and
                     provides technical support for legacy platform regularly.
-                    <ul>
+                    <ul className="mt-1">
                       <li>
                         <b>FE Tech Stack:</b> Typescript, Angular, Bootstrap,
                         rxjs, ngrx, HTML, CSS, SASS
@@ -68,14 +68,14 @@ export default class Resume extends Component {
                       </li>
                       <li>
                         Optimizes performance through consolidation of
-                        components and share utilities
+                        components and shared utilities
                       </li>
                       <li>
-                        Leverages current software to create and maintain
+                        Leverages current tech stacks to create and implement
                         sustainable and scalable systems
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </article>
                 <article className="row">
                   <div className="col-12 d-flex justify-content-between flex-wrap">
@@ -106,10 +106,10 @@ export default class Resume extends Component {
                     <h5>CourseStorm - Tech Support Specialist</h5>
                     <h6>Remote | Oct 2020 - Feb 2021</h6>
                   </div>
-                  <p className="col-12">
+                  <div className="col-12">
                     Provides technical assistance to tech newcomers through
                     phone and email support.
-                    <ul>
+                    <ul className="mt-1">
                       <li>
                         Writes SQL queries to navigate extensive SQL databases
                         with ease
@@ -119,17 +119,17 @@ export default class Resume extends Component {
                         software
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </article>
                 <article className="row">
                   <div className="col-12 d-flex justify-content-between flex-wrap">
                     <h5>CourseStorm - Tech Support Specialist</h5>
                     <h6>Remote | Oct 2020 - Feb 2021</h6>
                   </div>
-                  <p className="col-12">
+                  <div className="col-12">
                     Provides technical assistance to tech newcomers through
                     phone and email support.
-                    <ul>
+                    <ul className="mt-1">
                       <li>
                         Writes SQL queries to navigate extensive SQL databases
                         with ease
@@ -139,7 +139,7 @@ export default class Resume extends Component {
                         software
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </article>
                 <article className="row">
                   <div className="col-12 d-flex justify-content-between flex-wrap">
@@ -149,11 +149,11 @@ export default class Resume extends Component {
                     </h5>
                     <h6>Remote | Oct 2019 - Oct 2021</h6>
                   </div>
-                  <p className="col-12">
+                  <div className="col-12">
                     Built current website and provides website maintenance and
                     management. Creates and maintains a yearly communications
                     calendar.
-                    <ul>
+                    <ul className="mt-1">
                       <li>
                         Developed new logos to showcase a new online-focused
                         programming.
@@ -168,17 +168,17 @@ export default class Resume extends Component {
                         meetings
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </article>
               </div>
               <div className="col-12">
                 <h4>RECENT PROJECTS</h4>
                 <article className="row">
                   <h5 className="col-12">Safe Space - Front End Engineer</h5>
-                  <p className="col-12">
+                  <div className="col-12">
                     The only existing centralized hub of LGBTQ businesses and
                     resources that reach across state lines.
-                    <ul>
+                    <ul className="mt-1">
                       <li>
                         <b>Role:</b> Designed, built, and tested the entire
                         front end of the application. Mobile-first & responsive
@@ -195,16 +195,16 @@ export default class Resume extends Component {
                         <b>Deployed:</b> safe-space-ne.herokuapp.com/
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </article>
                 <article className="row">
                   <h5 className="col-12">
                     Ascent: Sobriety Tool - Front End Engineer
                   </h5>
-                  <p className="col-12">
+                  <div className="col-12">
                     An application that helps members track continuous AND
                     discontinuous time in sobriety.
-                    <ul>
+                    <ul className="mt-1">
                       <li>
                         <b>Role:</b> Designed, built, and tested the entire
                         front end of the application. Mobile-first & responsive
@@ -222,7 +222,7 @@ export default class Resume extends Component {
                         <b>Deployed:</b> ascent-sobriety.herokuapp.com/
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </article>
               </div>
               <div className="col-12">
@@ -238,14 +238,14 @@ export default class Resume extends Component {
                   <h5>
                     University of Southern Maine — Bachelors in Studio Art
                   </h5>
-                  <h6>2017</h6>
+                  <h6>May 2017</h6>
                 </div>
-                <p>
-                  <ul>
+                <div>
+                  <ul className="mt-1">
                     <li>Dean’s List 2015 - 2017</li>
                     <li>Peregrine Fellowship - 2017</li>
                   </ul>
-                </p>
+                </div>
                 <div className="d-flex justify-content-between flex-wrap">
                   <h5>
                     Maine Association of Nonprofits — Emerging Leaders Program

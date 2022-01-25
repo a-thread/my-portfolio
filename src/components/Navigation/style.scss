@@ -1,10 +1,15 @@
 @import '../../design-tokens/scss-variables.scss';
 
 nav {
-    background-color: var(--color-additional);
 
     h1 {
         font-size: 2rem;
+    }
+
+    button {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        outline: none;
     }
 
     #basic-navbar-nav > div > a {
@@ -13,7 +18,7 @@ nav {
         letter-spacing: 2px;
         text-transform: uppercase;
         margin-right: 20px;
-        color: var(--color-primary);
+        color: var(--color-primary-light);
 
         &:last-child {
             margin-right: 0;
@@ -21,7 +26,7 @@ nav {
 
         &:hover,
         &.selected {
-            color: var(--color-secondary)
+            color: var(--color-secondary-light)
         }
 
         @media screen and (max-width: 992px) {

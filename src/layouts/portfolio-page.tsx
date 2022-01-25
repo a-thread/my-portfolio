@@ -5,6 +5,7 @@ import './style.scss';
 import { IProject } from '../components/PortCard/project.model';
 import Navigation from '../components/Navigation';
 import SideLinks from '../components/SideLinks';
+import Footer from '../components/Footer';
 
 export default class PortfolioPage extends Component {
 
@@ -12,9 +13,9 @@ export default class PortfolioPage extends Component {
         return (
             <>
                 <Navigation />
-                <div className='project-container'>
-                    <header>
-                        <h1>Recent Projects</h1>
+                <div className='project-container bg-additional pb-2'>
+                    <header className='text-center d-flex justify-content-center'>
+                        <h1 className='text-blue text-center'>Recent Projects</h1>
                     </header>
                     <div className='portfolio'>
                         {data.map((project: IProject) => {
@@ -24,6 +25,7 @@ export default class PortfolioPage extends Component {
                     </div>
                 </div>
                 <SideLinks />
+                <Footer />
             </>
         )
     }

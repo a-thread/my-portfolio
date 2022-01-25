@@ -31,7 +31,7 @@ div.intro {
                 padding: 5px;
                 margin: 2rem;
                 border-radius: 50%;
-                border: 5px solid var(--color-secondary);
+                border: 5px solid var(--color-secondary-light);
 
                 @media screen and (max-width: 800px) {
                     width: 80vw;
@@ -44,16 +44,14 @@ div.intro {
             padding: 2rem 0 5rem 2rem;
 
             .type-container {
-                color: var(--color-secondary);
                 font-size: 3vh;
                 font-weight: 500;
-                margin-top: 1.25rem;
             }
 
             button.projects {
                 margin-top: 1rem;
                 font-family: 'Ubuntu', sans-serif;
-                background-color: var(--color-primary);
+                background-color: var(--color-primary-light);
                 --animate-delay: 2s;
               
                 &:hover {
@@ -68,7 +66,6 @@ div.intro {
     }
 
     a>.arrow {
-        background-color: var(--color-additional);
         font-size: 40px;
 
         i {

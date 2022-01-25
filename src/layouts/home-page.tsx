@@ -1,9 +1,8 @@
-// import Footer from '../common/Footer';
-
 import { Component } from 'react';
 import Feedback from 'react-bootstrap/esm/Feedback';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import Intro from '../components/Intro';
 import Navigation from '../components/Navigation';
 import SideLinks from '../components/SideLinks';
@@ -21,7 +20,7 @@ export default class HomePage extends Component {
                 <Feedback />
                 <Contact />
                 <SideLinks />
-                {/* <Footer /> */}
+                <Footer />
             </>
         )
     }
