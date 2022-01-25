@@ -42,20 +42,14 @@ export default class PortCard extends Component<IProject> {
 
             {/* Guest Login, if any */}
             {(email && password) &&
-              <div className='login mt-2'>
-
-                {/* title */}
-                <span><strong>Guest Login:</strong></span>
-
-                {/* email */}
-                <p className='my-1'><strong>email:</strong> {email}</p>
-
-                {/* password */}
-                <p className='my-1'><strong>password:</strong> {password}</p>
+              <div className='login'>
+                <p className="mt-0 mb-1"><b>Guest Login:</b></p>
+                <p className='my-1'><b>email:</b> {email}</p>
+                <p className='my-1'><b>password:</b> {password}</p>
               </div>}
 
             {/* Tech Used */}
-            <p className='mt-2'><strong>Tech Used:</strong> {tech}</p>
+            <p className='mt-2'><b>Tech Used:</b> {tech}</p>
           </div>
         </div>
       </article >

@@ -4,7 +4,7 @@ import './style.scss';
 export default class SideLinks extends Component {
     render() {
         return (
-            <div className='btn-group-vertical custom-shadow text-white'>
+            <div className='btn-group-vertical custom-shadow'>
                 {/* Github */}
                 <a href='https://github.com/a-thread' aria-label='github' rel='noreferrer' target='_blank'>
                     <button type='button' className='btn text-center' aria-label='link to github page'>

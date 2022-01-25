@@ -1,11 +1,11 @@
-import { useState } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { ThemeContext, themes } from '../../context/themeContext';
+import { useBetween } from 'use-between';
+import { themes, useShareableState } from '../../utils/utils';
 import './style.scss';
 
 export default function Navigation() {
-    const [colorTheme, setContrastTheme] = useState(true);
+    const { theme, setTheme } = useBetween(useShareableState);
 
     return (
         <Navbar className='bg-additional py-2 px-3 m-0 w-100' expand='lg'>
@@ -31,19 +31,14 @@ export default function Navigation() {
                         resume
                     </NavLink>
                     <div className='d-flex flex-end'>
-                        <ThemeContext.Consumer>
-                            {({ changeTheme }) => (
-                                <Button
-                                    onClick={() => {
-                                        setContrastTheme(!colorTheme);
-                                        changeTheme(colorTheme ? themes.contrast : themes.color);
-                                    }}
-                                >
-                                    <i className={!colorTheme ? 'fas fa-sun' : 'fas fa-moon'}></i>
-                                    <span className="d-lg-none d-md-block">Switch Mode</span>
-                                </Button>
-                            )}
-                        </ThemeContext.Consumer>
+                        <Button
+                            onClick={() => {
+                                setTheme(theme === '' ? themes.contrast : themes.color);
+                            }}
+                        >
+                            <i className={theme === '' ? 'fas fa-moon' : 'fas fa-sun'}></i>
+                            <span className="d-lg-none d-md-block">Switch Mode</span>
+                        </Button>
                     </div>
                 </Nav>
             </Navbar.Collapse>

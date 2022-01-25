@@ -1,6 +1,10 @@
-@import '../../design-tokens/scss-variables.scss';
+@import '../../utils/design-tokens/scss-variables.scss';
 
 nav {
+
+    button.toggle-button {
+        color: var(--color-primary-light)
+    }
 
     h1 {
         font-size: 2rem;
@@ -12,6 +16,7 @@ nav {
         outline: none;
     }
 
+    button,
     #basic-navbar-nav > div > a {
         font-weight: 500;
         font-size: 1.25em;
@@ -30,9 +35,6 @@ nav {
         }
 
         @media screen and (max-width: 992px) {
-            &:first-child {
-                margin-top: 10px;
-            }
             margin-right: 0;
             text-align: right;
         }

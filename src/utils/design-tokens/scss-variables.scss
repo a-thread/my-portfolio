@@ -6,15 +6,19 @@
     --color-additional: #457b9d;
     --text-primary: black;
     --text-secondary: black;
-    --header: #457b9d;
+    --text-links: black;
+    --header-primary: #457b9d;
+    --header-secondary: #457b9d;
 }
 .contrast {
     --color-primary: black;
-    --color-primary-light: white;
+    --color-primary-light: lightgray;
     --color-secondary: darkgray;
     --color-secondary-light: white;
     --color-additional: black;
     --text-primary: white;
     --text-secondary: black;
-    --header: white;
+    --text-links: gray;
+    --header-primary: white;
+    --header-secondary: black;
   }

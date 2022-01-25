@@ -3,14 +3,18 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { useBetween } from 'use-between';
 import HomePage from './layouts/home-page';
 import PortfolioPage from './layouts/portfolio-page';
 import ResumePage from './layouts/resume-page';
+import { useShareableState } from './utils/utils';
 
 function App() {
+  const { theme} = useBetween(useShareableState);
+  const className = theme + ' m-0 p-0 w-100 h-100'
 
   return (
-    <div className='m-0 p-0 w-100 h-100'>
+    <div className={className}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />

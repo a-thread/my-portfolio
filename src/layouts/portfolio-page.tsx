@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import data from '../data/projects.json';
+import data from '../utils/data/projects.json';
 import PortCard from '../components/PortCard';
 import './style.scss';
 import { IProject } from '../components/PortCard/project.model';

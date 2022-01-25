@@ -1,4 +1,4 @@
-@import '../../design-tokens/scss-variables.scss';
+@import '../../utils/design-tokens/scss-variables.scss';
 
 div.intro {
     background-color: var(--color-additional);
@@ -52,7 +52,7 @@ div.intro {
                 margin-top: 1rem;
                 font-family: 'Ubuntu', sans-serif;
                 background-color: var(--color-primary-light);
-                --animate-delay: 2s;
+                --animate-delay: 3s;
               
                 &:hover {
                   background-color: var(--color-secondary)
