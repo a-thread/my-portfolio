@@ -3,7 +3,7 @@ import './style.scss';
 import { Button } from 'react-bootstrap'
 import Typewriter from 'typewriter-effect';
 import { useBetween } from 'use-between';
-import { useShareableState } from '../../utils/utils';
+import { themes, useShareableState } from '../../utils/utils';
 
 export default function Intro() {
     const { theme } = useBetween(useShareableState);
@@ -26,7 +26,7 @@ export default function Intro() {
             <div className='d-flex flex-wrap align-items-center justify-content-center main-container'>
                 <div className='headshot-container'>
                     {/* image */}
-                    <img src={theme === 'contrast' ? contrastPhoto : colorPhoto} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
+                    <img src={theme === themes.contrast ? contrastPhoto : colorPhoto} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
                 </div>
                 <div className='text-container'>
                     {/* Intro title */}

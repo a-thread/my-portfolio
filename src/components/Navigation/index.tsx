@@ -34,10 +34,10 @@ export default function Navigation() {
                     <div className='d-flex flex-end'>
                         <Button
                             onClick={() => {
-                                setTheme(theme === '' ? themes.contrast : themes.color);
+                                setTheme(theme === themes.contrast ? themes.color : themes.contrast);
                             }}
                         >
-                            <i className={theme === '' ? 'fas fa-moon' : 'fas fa-sun'}></i>
+                            <i className={theme === themes.contrast ? 'fas fa-sun' : 'fas fa-moon'}></i>
                             <span className="d-lg-none d-md-block">Switch Mode</span>
                         </Button>
                     </div>
