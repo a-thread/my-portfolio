@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { BsGithub, BsTelephone } from 'react-icons/bs'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { IconContext } from 'react-icons/lib';
+import { MdEmail } from 'react-icons/md';
 import './style.scss';
 
 export default class Contact extends Component {
@@ -11,16 +15,32 @@ export default class Contact extends Component {
                     <div className='contact-info'>
                         {/* Github */}
                         <a className='contact-item' href='https://github.com/a-thread' rel='noreferrer' target='_blank'>
-                            <b><i className='fab fa-github'></i></b> github.com/a-thread</a>
+                            <IconContext.Provider
+                                value={{ color: 'white' }}>
+                                <BsGithub />
+                            </IconContext.Provider> github.com/a-thread
+                        </a>
                         {/* LinkedIn */}
                         <a className='contact-item' href='https://www.linkedin.com/in/a-thread' rel='noreferrer' target='_blank'>
-                            <b><i className='fab fa-linkedin'></i></b> linkedin.com/in/a-thread/</a>
+                            <IconContext.Provider
+                                value={{ color: 'white' }}>
+                                <FaLinkedinIn />
+                            </IconContext.Provider> linkedin.com/in/a-thread/
+                        </a>
                         {/* Email */}
                         <a className='contact-item' href='mailto:aiden.threadgoode@gmail.com'>
-                            <b><i className='fas fa-paper-plane'></i></b> aiden.threadgoode@gmail.com</a>
+                            <IconContext.Provider
+                                value={{ color: 'bg-accent' }}>
+                                <MdEmail />
+                            </IconContext.Provider> aiden.threadgoode@gmail.com
+                        </a>
                         {/* Phone */}
                         <a className='contact-item' href='tel:2077491341'>
-                            <b><i className='fas fa-phone'></i></b> 207-749-1341</a>
+                            <IconContext.Provider
+                                value={{ color: 'bg-accent' }}>
+                                <BsTelephone />
+                            </IconContext.Provider> 207-749-1341
+                        </a>
                     </div>
                 </article>
             </div>
