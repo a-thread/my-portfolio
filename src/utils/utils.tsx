@@ -6,7 +6,7 @@ export const themes = {
 };
 
 export const useShareableState = () => {
-  const [theme, setTheme] = useState("color");
+  const [theme, setTheme] = useState("contrast");
   return {
     theme,
     setTheme,

@@ -5,7 +5,7 @@ export default class Feedback extends Component {
     render() {
         return (
             <div id='feedback'>
-                <h3 className='text-blue'>Feedback</h3>
+                <h3 className='text-primary-light'>Feedback</h3>
                 <article className='feedback'>
                     <p>
                         'Aiden is always in a good mood making him a pleasure to work with. Would gladly work with

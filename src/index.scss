@@ -1,5 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import './utils/design-tokens/scss-variables.scss';
+@import './utils/design-tokens.scss';
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -57,16 +57,27 @@ h3 {
   }
 }
 
-.text-green {
+.custom-text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-links {
+  color: var(--text-links);
+  &:hover {
+    color: #C054BE;
+  }
+}
+
+.text-secondary-light {
   color: var(--color-secondary-light);
 }
 
-.text-blue {
+.text-primary-light {
   color: var(--color-primary-light);
 }
 
-.bg-additional {
-  background-color: var(--color-additional);
+.bg-accent {
+  background-color: var(--color-accent);
 }
 
 .bg-primary {

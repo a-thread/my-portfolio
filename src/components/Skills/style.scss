@@ -4,7 +4,7 @@ div.skillsContainer {
     h3 {
         text-align: center;
         margin: 20px 0 50px 0;
-        color: var(--color-additional);
+        color: var(--color-accent);
 
         @media screen and (min-width: 800px) {
             br {
@@ -33,7 +33,7 @@ div.skillsContainer {
             padding: 1rem;
 
             h4 {
-                color: var(--color-additional);
+                color: var(--color-accent);
                 font-size: 25px;
                 padding: 0;
                 margin: 10px;

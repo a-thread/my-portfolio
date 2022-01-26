@@ -1,17 +1,14 @@
-@import '../../utils/design-tokens/scss-variables.scss';
+@import '../../utils/design-tokens.scss';
 
 div.intro {
-    background-color: var(--color-additional);
-    height: 95vh;
+    height: 92vh;
 
     @media screen and (max-width: 800px) {
         text-align: center;
         justify-content: flex-start;
-        height: 87vh;
     }
 
     @media screen and (max-width: 400px) {
-        min-height: 85vh;
         margin: 0;
     }
 
@@ -31,7 +28,7 @@ div.intro {
                 padding: 5px;
                 margin: 2rem;
                 border-radius: 50%;
-                border: 5px solid var(--color-secondary-light);
+                border: 5px solid var(--color-primary);
 
                 @media screen and (max-width: 800px) {
                     width: 80vw;
@@ -51,13 +48,15 @@ div.intro {
             button.projects {
                 margin-top: 1rem;
                 font-family: 'Ubuntu', sans-serif;
-                background-color: var(--color-primary-light);
                 --animate-delay: 3s;
-              
+                background-color: var(--color-secondary);
+                color: var(--text-primary);
+
                 &:hover {
-                  background-color: var(--color-secondary)
+                    background-color: var(--color-secondary-light);
+                    color: var(--text-secondary);
                 }
-              }
+            }
 
             @media screen and (max-width: 1000px) {
                 padding: 0;
@@ -75,7 +74,7 @@ div.intro {
             animation: bounce 2s infinite;
 
             @media screen and (max-width: 1000px) {
-                bottom: -7vh
+                bottom: -5vh
             }
 
             @media screen and (max-width: 400px) {

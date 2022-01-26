@@ -1,4 +1,4 @@
-@import '../../utils/design-tokens/scss-variables.scss';
+@import '../../utils/design-tokens.scss';
 #contact {
     
     h3 {
@@ -33,7 +33,7 @@
             }
 
             &:hover {
-                color: var(--color-secondary-light);
+                color: var(--color-primary-light);
             }
 
             i.fas,

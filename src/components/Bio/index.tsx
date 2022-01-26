@@ -5,7 +5,7 @@ export default class Bio extends Component {
     render() {
         return (
             <div className='about-me' id='bio'>
-                <h3 className='about-title text-blue'>BIO</h3>
+                <h3 className='about-title text-primary-light mb-4'>BIO</h3>
 
                 <article>
                     <p className='bio-content'>

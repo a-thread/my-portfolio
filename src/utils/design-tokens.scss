@@ -3,22 +3,22 @@
     --color-primary-light: #d2e9ee;
     --color-secondary: #BBCB9F;
     --color-secondary-light: #d5e8b4;
-    --color-additional: #457b9d;
+    --color-accent: #457b9d;
     --text-primary: black;
     --text-secondary: black;
-    --text-links: black;
+    --text-links: #d5e8b4;
     --header-primary: #457b9d;
     --header-secondary: #457b9d;
 }
 .contrast {
-    --color-primary: black;
-    --color-primary-light: lightgray;
-    --color-secondary: darkgray;
-    --color-secondary-light: white;
-    --color-additional: black;
-    --text-primary: white;
+    --color-primary: #24292E;
+    --color-primary-light: #F6F7F9;
+    --color-secondary: #596066;
+    --color-secondary-light: #9EA5AD;
+    --color-accent: black;
+    --text-primary: #F6F7F9;
     --text-secondary: black;
-    --text-links: gray;
-    --header-primary: white;
+    --text-links: #9EA5AD;
+    --header-primary: #F6F7F9;
     --header-secondary: black;
   }

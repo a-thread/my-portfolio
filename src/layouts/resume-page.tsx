@@ -10,7 +10,7 @@ export default class ResumePage extends Component {
         return (
             <div className='resume-container m-0'>
                 <Navigation />
-                <div className='row my-4'>
+                <div className='my-4 d-flex justify-content-center'>
                     <div>
                         <a
                             rel='noreferrer' target='_blank'

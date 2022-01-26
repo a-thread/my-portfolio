@@ -7,7 +7,6 @@ $buttons-height: 24px;
     width: 40px;
     z-index: 9999;
     margin-top: -$buttons-height;
-    text-align: center;
 
     a {
         padding: 0 !important;
@@ -16,7 +15,8 @@ $buttons-height: 24px;
         font-family: Arial, sans-serif;
         
         button {
-            color: var(--text-links);
+            background-color: var(--color-accent);
+            color: var(--text-primary);
             
             &:hover {
                 background-color: var(--color-secondary);

@@ -8,7 +8,7 @@ export default class Resume extends Component {
           <Card.Body>
             <header className="row d-flex justify-content-between mb-3">
               <div className="col-12 col-sm-8">
-                <h1 className="text-black">Aiden Threadgoode</h1>
+                <h1 className="text-black text-right">Aiden Threadgoode</h1>
                 <h4>Full-Stack Engineer</h4>
                 <h6><i>pronouns: he/him</i></h6>
               </div>

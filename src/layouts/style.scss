@@ -1,4 +1,4 @@
-@import '../utils/design-tokens/scss-variables.scss';
+@import '../utils/design-tokens.scss';
 
 // Portfolio Page
 div.project-container {
@@ -28,12 +28,12 @@ div.project-container {
             }
 
             button {
-                background-color: var(--color-secondary-light);
+                background-color: var(--color-primary-light);
             }
         }
 
         &:nth-of-type(even) {
-            background-color: var(--color-secondary);
+            background-color: var(--color-secondary-light);
 
             h2 {
                 color: var(--header-secondary);
@@ -95,11 +95,11 @@ div.project-container {
     button.resume {
         min-width: 8rem;
         margin: 0 20px 10px 20px;
-        background-color: var(--color-secondary);
+        background-color: var(--header-primary);
         
         &:hover {
-            color: var(--text-secondary);
-            background-color: var(--header-primary);
+            color: var(--text-primary);
+            background-color: var(--color-secondary);
         }
       }
 }

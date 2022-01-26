@@ -21,12 +21,12 @@ export default class Skills extends Component {
                 </div>
                 <div className='skillsSection'>
                     <div>
-                        <span className='text-blue'><i className='fas fa-code-branch'></i></span>
+                        <span className='text-primary-light'><i className='fas fa-code-branch'></i></span>
                         <h4>Tools</h4>
                         <p>Git, Github, Jira, , Hubspot, Slack, Adobe Creative Suite</p>
                     </div>
                     <div className='soft'>
-                        <span className='text-blue'><i className='fas fa-users-cog'></i></span>
+                        <span className='text-primary-light'><i className='fas fa-users-cog'></i></span>
                         <h4>Soft Skills</h4>
                         <p>Critical Thinking, Communication, Resourcefulness, Resilience, Organization, Flexibility, A True Passion for Learning</p>
                     </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from '../utils/data/projects.json';
+import data from '../utils/data.json';
 import PortCard from '../components/PortCard';
 import './style.scss';
 import { IProject } from '../components/PortCard/project.model';
@@ -13,9 +13,9 @@ export default class PortfolioPage extends Component {
         return (
             <>
                 <Navigation />
-                <div className='project-container bg-additional p-2'>
+                <div className='project-container bg-accent p-2'>
                     <header className='d-flex justify-content-center'>
-                        <h1 className='text-green text-center'>Recent Projects</h1>
+                        <h1 className='text-secondary-light text-center'>Recent Projects</h1>
                     </header>
                     <div className='portfolio'>
                         {data.map((project: IProject) => {

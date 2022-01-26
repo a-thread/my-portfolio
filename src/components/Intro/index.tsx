@@ -22,7 +22,7 @@ export default function Intro() {
     
 
     return (
-        <div className='intro w-100 d-flex flex-column justify-content-center'>
+        <div className='intro bg-accent w-100 d-flex flex-column justify-content-center'>
             <div className='d-flex flex-wrap align-items-center justify-content-center main-container'>
                 <div className='headshot-container'>
                     {/* image */}
@@ -30,11 +30,11 @@ export default function Intro() {
                 </div>
                 <div className='text-container'>
                     {/* Intro title */}
-                    <h1 className='text-blue intro-title animate__animated animate__backInLeft'>
-                        Hi, I'm <span className='text-green'>Aiden.</span>
+                    <h1 className='text-secondary-light intro-title animate__animated animate__backInLeft'>
+                        Hi, I'm <span className='text-primary-light'>Aiden.</span>
                     </h1>
                     {/* Typewriter effect*/}
-                    <h2 className='type-container text-green mt-3'>
+                    <h2 className='type-container text-secondary-light mt-3'>
                         <Typewriter
                             options={{
                                 strings: ['Full Stack Engineer', 'Dog Dad', 'Artist'],
@@ -45,13 +45,13 @@ export default function Intro() {
                     </h2>
                     {/* Project button */}
                     <Link to='/projects'>
-                        <Button variant='flat' className='btn-outline custom-shadow projects animate__animated animate__backInRight'> recent projects </Button>
+                        <Button variant='flat' className='custom-shadow projects animate__animated animate__backInRight'> recent projects </Button>
                     </Link>
                 </div>
             </div>
             {/* Bouncing arrow */}
             <a href='#bio' aria-label='link to bio area'>
-                <div className='bg-additional arrow text-white text-center w-100 mt-10'>
+                <div className='bg-accent arrow text-white text-center w-100 mt-10'>
                     <i className='fas fa-chevron-down' />
                 </div>
             </a>
