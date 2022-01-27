@@ -1,5 +1,14 @@
 @import '../utils/design-tokens.scss';
 
+// Home Page
+div.intro-wrapper {
+    height: 100vh;
+
+    div.intro {
+        flex-grow: 1;
+    }
+}
+
 // Portfolio Page
 div.project-container {
 

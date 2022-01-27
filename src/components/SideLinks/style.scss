@@ -7,6 +7,7 @@ $buttons-height: 24px;
     width: 40px;
     z-index: 9999;
     margin-top: -$buttons-height;
+    border-radius: 15px 0px 0px 15px;
 
     a {
         padding: 0 !important;

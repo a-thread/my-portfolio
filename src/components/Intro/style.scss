@@ -1,17 +1,10 @@
 @import '../../utils/design-tokens.scss';
 
 div.intro {
-    height: 92vh;
 
     @media screen and (max-width: 800px) {
         text-align: center;
         justify-content: flex-start;
-        min-height: 87vh;
-    }
-
-    @media screen and (max-width: 400px) {
-        margin: 0;
-        min-height: 83vh;
     }
 
     .main-container {
@@ -48,7 +41,6 @@ div.intro {
             }
 
             button.projects {
-                margin-top: 1rem;
                 font-family: 'Ubuntu', sans-serif;
                 --animate-delay: 3s;
                 background-color: var(--color-secondary);
@@ -77,10 +69,6 @@ div.intro {
 
             @media screen and (max-width: 1000px) {
                 bottom: -7vh
-            }
-
-            @media screen and (max-width: 400px) {
-                bottom: -6vh
             }
         }
     }

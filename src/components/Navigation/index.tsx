@@ -37,6 +37,7 @@ export default function Navigation() {
                     </NavLink>
                     <div className='d-flex flex-end'>
                         <Button
+                            aria-label="toggle theme"
                             onClick={() => {
                                 setTheme(theme === themes.contrast ? themes.color : themes.contrast);
                             }}

@@ -13,8 +13,10 @@ export default class HomePage extends Component {
 
         return (
             <>
-                <Navigation />
-                <Intro />
+                <div className="intro-wrapper d-flex flex-column">
+                    <Navigation />
+                    <Intro />
+                </div>
                 <Bio />
                 <Skills />
                 <Feedback />

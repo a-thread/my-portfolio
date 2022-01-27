@@ -22,7 +22,7 @@ export default function Intro() {
     
 
     return (
-        <div className='intro bg-accent w-100 d-flex flex-column justify-content-center'>
+        <div className='intro bg-accent w-100 h-100 d-flex flex-column justify-content-center'>
             <div className='d-flex flex-wrap align-items-center justify-content-center main-container'>
                 <div className='headshot-container'>
                     {/* image */}
@@ -45,7 +45,7 @@ export default function Intro() {
                     </h2>
                     {/* Project button */}
                     <Link to='/projects'>
-                        <Button variant='flat' className='custom-shadow projects animate__animated animate__backInRight'> recent projects </Button>
+                        <Button variant='flat' className='mt-3 custom-shadow projects animate__animated animate__backInRight'> recent projects </Button>
                     </Link>
                 </div>
             </div>
