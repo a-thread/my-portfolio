@@ -20,6 +20,17 @@ nav {
     #basic-navbar-nav>div>a {
         font-size: 1.25em;
         letter-spacing: 2px;
+
+        .btn {
+            padding: 0 !important;
+        }
+
+        svg {
+            font-size: larger;
+        }
+    }
+
+    #basic-navbar-nav>div>a {
         text-transform: uppercase;
         margin-right: 20px;
         color: var(--color-primary-light);
@@ -31,11 +42,6 @@ nav {
         &:hover,
         &.selected {
             color: var(--color-secondary-light)
-        }
-
-        svg {
-            margin-right: 8px;
-            font-size: larger;
         }
 
         @media screen and (max-width: 992px) {
