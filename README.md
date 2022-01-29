@@ -9,8 +9,8 @@ My portfolio website built with TypeScript and React. It contains a short bio, r
 
 ### Images of Home Screen
 
-![Image of Home Page in Color](./public/images/color-homepage.png)
-![Image of Home Page in Contrast Tones](./public/images/contrast-homepage.png)
+<img src="./public/images/contrast-homepage.png" width="49%" />
+<img src="./public/images/color-homepage.png" width="49%" />
 
 ### Tools/Technologies Used
 
@@ -19,7 +19,6 @@ My portfolio website built with TypeScript and React. It contains a short bio, r
 * Bootstrap
 * Github Pages
 * [react-typical](https://www.producthunt.com/posts/react-typical)
-* [imgbb](https://imgbb.com/)
 
 #### Questions
 
