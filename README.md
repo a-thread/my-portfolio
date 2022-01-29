@@ -9,8 +9,9 @@ My portfolio website built with TypeScript and React. It contains a short bio, r
 
 ### Images of Home Screen
 
-<img src="./public/images/contrast-homepage.png" width="49%" />
-<img src="./public/images/color-homepage.png" width="49%" />
+Dark Mode             |  Light Mode
+:-------------------------:|:-------------------------:
+![Photo of Dark Mode](./public/images/contrast-homepage.png) | ![Photo of Light Mode](./public/images/color-homepage.png)
 
 ### Tools/Technologies Used
 
