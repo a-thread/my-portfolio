@@ -16,7 +16,7 @@
         "title": "Ascent",
         "email": "email@address.com",
         "password": "password",
-        "image": "https://i.ibb.co/17mXtQg/ascent.png",
+        "image": "/images/portfolio/2.png",
         "description": "Ascent is a sobriety tool that helps members track their daily mood & thoughts as well as various lengths of sobriety. In a time where more and more people are living sober lifestyles, this app caters to those who are seeking to track continuous time as well as discontinuous time.",
         "tech": "Express, Sequelize, MySQL, CORS, Nodemailer, Passport, Express-Handlebars, Moment, ApexCharts, Bootstrap, Canva, and Frontify.",
         "github": "https://github.com/a-thread/ascent-sobriety/",
