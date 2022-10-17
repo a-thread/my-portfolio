@@ -5,9 +5,9 @@ import {
 } from 'react-router-dom';
 import * as React from "react";
 import { useBetween } from 'use-between';
-import HomePage from './layouts/home-page';
-import PortfolioPage from './layouts/portfolio-page';
-import ResumePage from './layouts/resume-page';
+import HomePage from './pages/home-page';
+import PortfolioPage from './pages/portfolio-page';
+import ResumePage from './pages/resume-page';
 import { useShareableState } from './utils/utils';
 
 function App() {
