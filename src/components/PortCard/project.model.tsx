@@ -7,8 +7,9 @@ export interface IProject {
     password: string;
     description: string;
     tech: string;
-    deployed: string;
     github: string;
+    deployed?: string;
+    demo?: string;
 }
 
 export interface IProjectState {}

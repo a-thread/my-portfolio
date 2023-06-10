@@ -5,7 +5,7 @@ import './style.scss';
 
 export default class PortCard extends Component<IProject> {
   render() {
-    const { id, image, title, deployed, github, description, email, password, tech } = this.props;
+    const { id, image, title, deployed, demo, github, description, email, password, tech } = this.props;
     return (
       <article className='portfolio-item custom-shadow py-2' id={`${id}`}>
 
@@ -19,9 +19,20 @@ export default class PortCard extends Component<IProject> {
           <div className='btnsRow d-flex flex-wrap justify-content-around align-items-center'>
 
             {/* Deployed */}
-            <a href={deployed} target='_blank' rel='noreferrer'>
-              <Button variant='flat' className='custom-shadow'>App</Button>
-            </a>
+            {
+              deployed &&
+              <a href={deployed} target='_blank' rel='noreferrer'>
+                <Button variant='flat' className='custom-shadow'>App</Button>
+              </a>
+            }
+
+            {/* Demo */}
+            {
+              demo &&
+              <a href={demo} target='_blank' rel='noreferrer'>
+                <Button variant='flat' className='custom-shadow'>Demo</Button>
+              </a>
+            }
 
             {/* Repo */}
             <a href={github} target='_blank' rel='noreferrer'>
