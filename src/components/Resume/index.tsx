@@ -191,9 +191,6 @@ export default class Resume extends Component {
                       <li>
                         <b>Github:</b> github.com/a-thread/safe-space
                       </li>
-                      <li>
-                        <b>Deployed:</b> safe-space-ne.herokuapp.com/
-                      </li>
                     </ul>
                   </div>
                 </article>
@@ -217,9 +214,6 @@ export default class Resume extends Component {
                       </li>
                       <li>
                         <b>Github:</b> github.com/a-thread/Ascent-Sobriety
-                      </li>
-                      <li>
-                        <b>Deployed:</b> ascent-sobriety.herokuapp.com/
                       </li>
                     </ul>
                   </div>
