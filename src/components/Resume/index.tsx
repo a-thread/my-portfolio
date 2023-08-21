@@ -31,7 +31,7 @@ export default class Resume extends Component {
                 </p>
               </div>
               <div className="col-12">
-                <h4>SKILLS</h4>
+                <h4>Skills</h4>
                 <p>
                   JavaScript, Typescript, HTML, CSS, Sass, React, Angular, rxjs,
                   ngrx, redux, Git, Github, MongoDB, Express, NodeJs, NestJs,
@@ -44,8 +44,14 @@ export default class Resume extends Component {
                 <h4>Experience</h4>
                 <article className="row">
                   <div className="col-12 d-flex justify-content-between flex-wrap">
+                    <h5>KeHE Distributors - Senior Software Engineer</h5>
+                    <h6>Remote | Aug 2023 - present</h6>
+                  </div>
+                </article>
+                <article className="row">
+                  <div className="col-12 d-flex justify-content-between flex-wrap">
                     <h5>KeHE Distributors - Frontend Software Engineer</h5>
-                    <h6>Remote | Feb 2021 - present</h6>
+                    <h6>Remote | Feb 2021 - Aug 2023</h6>
                   </div>
                   <div className="col-12">
                     Builds out new features, supports existing software and
@@ -172,7 +178,7 @@ export default class Resume extends Component {
                 </article>
               </div>
               <div className="col-12">
-                <h4>RECENT PROJECTS</h4>
+                <h4>Recent Projects</h4>
                 <article className="row">
                   <h5 className="col-12">Safe Space - Front End Engineer</h5>
                   <div className="col-12">
@@ -220,7 +226,7 @@ export default class Resume extends Component {
                 </article>
               </div>
               <div className="col-12">
-                <h4>EDUCATION</h4>
+                <h4>Education</h4>
                 <div className="d-flex justify-content-between flex-wrap">
                   <h5>
                     University of New Hampshire — Full Stack Web Development

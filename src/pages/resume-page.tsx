@@ -14,7 +14,7 @@ export default class ResumePage extends Component {
                     <div>
                         <a
                             rel='noreferrer' target='_blank'
-                            href='https://drive.google.com/uc?export=download&id=1q5kx3U25LwqHKoYo7miWmE59wJ3ufw19'
+                            href='https://docs.google.com/document/d/1sA68wHHfIcCFOtg2DxkTUiGCc7eReWvk16JM7kYO8r0/export?format=pdf'
                             className='d-flex flex-column justify-content-center align-items-center'>
                             <Button variant='flat' className='custom-shadow resume'>
                                 download resume
