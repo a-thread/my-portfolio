@@ -69,10 +69,10 @@
     {
         "id": 1,
         "key": 1,
-        "title": "/images/portfolio/7.png",
+        "title": "Markdown Generator",
         "email": "",
         "password": "",
-        "image": "https://i.ibb.co/bXcbTs1/md.png",
+        "image": "/images/portfolio/7.png",
         "description": "This is a command-line application that generates an organized and professional markdown. Using prompts in the terminal, the Ultimate Markdown Generator creates a README from user input that includes a title, as well as sections for a description, table of contents, installation, usage, technologies used, tests, contributing, and questions.",
         "tech": "Javascript, Node.js, npm, InquirerJs",
         "github": "https://github.com/a-thread/Ultimate-Markdown-Generator",
