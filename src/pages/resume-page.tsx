@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import Resume from '../components/Resume';
 import SideLinks from '../components/SideLinks';
 
 export default class ResumePage extends Component {
@@ -22,7 +21,11 @@ export default class ResumePage extends Component {
                         </a>
                     </div>
                 </div>
-                <Resume />
+                <div className="d-flex justify-content-center align-items-center">
+                    <div className="resume-iframe-container">
+                        <iframe title="Resume" className="w-100 h-100" src="https://docs.google.com/document/d/e/2PACX-1vRIQQCPL2xGJ_e0dKuza_VkhwG38bnqJKSQ8q6j-3X2Z491wZPrUlfXyMpmVQNVRatIxdB4h41zVhga/pub?embedded=true"></iframe>
+                    </div>
+                </div>
                 <SideLinks />
                 <Footer />
             </div>
