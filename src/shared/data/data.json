@@ -1,4 +1,17 @@
-[{
+[
+    {
+        "id": 9,
+        "key": 9,
+        "title": "Elysia",
+        "image": "/images/portfolio/9.jpg",
+        "description": "Elysia is platform designed to help users explore diverse recipes, develop new culinary skills, and become more self-reliant in the kitchen.",
+        "email": "a.threadless+1@proton.me",
+        "password": "password",
+        "tech": "React, Supabase, TailwindCss, Typescript, Vite, GH Pages ",
+        "github": "https://github.com/a-thread/elysia/",
+        "demo": "https://a-thread.github.io/elysia/"
+    },
+    {
         "id": 8,
         "key": 8,
         "title": "Safe Space",
@@ -6,7 +19,7 @@
         "description": "Safe Space offers a unique platform that helps the LGBTQ community safely expand their orbit by connecting members with resources, businesses and community. With Safe Space, members are able to securely and swiftly login with a social media account or email and password to access a database of trusted businesses and community organizations",
         "email": "email@address.com",
         "password": "Password123",
-        "tech": "Angular, NestJS, Heroku, Auth0, Balsamiq, Material, Axios, dotenv, TSLint, SCSS, Google G Suite, Canva, TypeORM, nodemon, MongoDB, Postman, Trello ",
+        "tech": "Angular, NestJS, Heroku, Auth0, Balsamiq, Material, Axios, dotenv, TSLint, SCSS, Google G Suite, Canva, TypeORM, nodemon, MongoDB, Trello ",
         "github": "https://github.com/a-thread/safe-space/"
     },
     {
@@ -28,7 +41,7 @@
         "password": "",
         "image": "/images/portfolio/3.png",
         "description": "Team Directory is an application built in Typescript and powered by React that enables the user to view, search and sort their employees by id, first name, last name, cell number and email. The directory also shows a photo of each employee so that employees can familiarize themselves with the team.",
-        "tech": "React, Typescript, Material-UI, Express, Axios, WebPack, Google Fonts, Font Awesome, PostMan",
+        "tech": "React, Typescript, Material-UI, Express, Axios, WebPack, Google Fonts, Font Awesome",
         "github": "https://github.com/a-thread/react-team-directory",
         "deployed": "https://a-thread.github.io/react-team-directory/"
     },
@@ -51,7 +64,7 @@
         "password": "",
         "image": "/images/portfolio/5.png",
         "description": "Eat-Ma-Burgers is a restaurant app that lets users input the names of burgers they'd like to eat. When the user inputs a burger name, it is displayed on the left side, under `Burgers to Eat` with buttons enabling the user to Try it! or Delete it if they don't like it. When the user clicks Try it! the burger is moved to the right side, under `Already Sampled.`",
-        "tech": "Express, Sequelize, MySQL, CORS, Nodemailer, Passport, Express-Handlebars, Moment, ApexCharts, Bootstrap, Canva, and Frontify.Node.js, Express.js, Express Handlebars, MySQL2, Postman",
+        "tech": "Express, Sequelize, MySQL, CORS, Nodemailer, Passport, Express-Handlebars, Moment, ApexCharts, Bootstrap, Canva, and Frontify.Node.js, Express.js, Express Handlebars, MySQL2",
         "github": "https://github.com/a-thread/eat-ma-burgers"
     },
     {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.scss';
 import { Button } from 'react-bootstrap'
 import Typewriter from 'typewriter-effect';
-import { useDarkMode } from "../../utils/DarkModeContext";
+import { useDarkMode } from "@shared/state/DarkModeContext";
 
 const Intro: React.FC = () => {
     const { isDarkMode } = useDarkMode();

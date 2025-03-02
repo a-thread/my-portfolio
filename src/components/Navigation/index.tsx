@@ -5,7 +5,7 @@ import Hamburger from 'hamburger-react';
 import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
 import './style.scss';
 import { IconContext } from "react-icons/lib";
-import { useDarkMode } from "../../utils/DarkModeContext";
+import { useDarkMode } from "@shared/state/DarkModeContext";
 
 const Navigation: React.FC = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
