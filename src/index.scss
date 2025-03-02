@@ -1,5 +1,6 @@
+@use './utils/design-tokens.scss' as *;
+
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import './utils/design-tokens.scss';
 
 body {
   font-family: 'Open Sans', sans-serif;
