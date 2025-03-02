@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter,
+  HashRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -11,13 +11,13 @@ import ResumePage from './pages/resume-page';
 const App: React.FC = () => {
   return (
     <div className="m-0 p-0 w-100 h-100">
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/projects' element={<PortfolioPage />} />
           <Route path='/resume' element={<ResumePage />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
