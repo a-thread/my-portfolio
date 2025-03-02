@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { useBetween } from 'use-between';
 import Hamburger from 'hamburger-react';
 import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
-import { themes, useShareableState } from '../../utils/utils';
 import './style.scss';
 import { IconContext } from "react-icons/lib";
+import { useDarkMode } from "../../utils/DarkModeContext";
 
-export default function Navigation() {
-    const { theme, setTheme } = useBetween(useShareableState);
+const Navigation: React.FC = () => {
+    const { isDarkMode, toggleDarkMode } = useDarkMode();
+
     const [isClosed, setClosed] = useState(false)
 
     return (
@@ -37,12 +37,10 @@ export default function Navigation() {
                     </NavLink>
                     <div className='d-flex flex-end'>
                         <Button
-                            aria-label="toggle theme"
-                            onClick={() => {
-                                setTheme(theme === themes.contrast ? themes.color : themes.contrast);
-                            }}
+                            aria-label="toggle dark mode"
+                            onClick={toggleDarkMode}
                         >
-                            {theme === themes.contrast ? (
+                            {isDarkMode ? (
                                 <IconContext.Provider
                                     value={{ color: 'white' }}>
                                     <BsFillSunFill />
@@ -61,3 +59,5 @@ export default function Navigation() {
         </Navbar>
     )
 }
+
+export default Navigation;

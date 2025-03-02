@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Feedback from 'react-bootstrap/esm/Feedback';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';
@@ -8,22 +8,22 @@ import Navigation from '../components/Navigation';
 import SideLinks from '../components/SideLinks';
 import Skills from '../components/Skills';
 
-export default class HomePage extends Component {
-    render() {
-
-        return (
-            <>
-                <div className="intro-wrapper d-flex flex-column">
-                    <Navigation />
-                    <Intro />
-                </div>
-                <Bio />
-                <Skills />
-                <Feedback />
-                <Contact />
-                <SideLinks />
-                <Footer />
-            </>
-        )
-    }
+const HomePage: React.FC = () => {
+    return (
+        <>
+            <div className="intro-wrapper d-flex flex-column">
+                <Navigation />
+                <Intro />
+            </div>
+            <Bio />
+            <Skills />
+            <Feedback />
+            <Contact />
+            <SideLinks />
+            <Footer />
+        </>
+    )
 }
+
+export default HomePage;
+

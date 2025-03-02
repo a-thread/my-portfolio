@@ -1,6 +1,29 @@
-@use './utils/design-tokens.scss' as *;
-
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --color-primary: #9FC5CE;
+  --color-primary-light: #d2e9ee;
+  --color-secondary: #BBCB9F;
+  --color-secondary-light: #d5e8b4;
+  --color-accent: #457b9d;
+  --text-primary: black;
+  --text-secondary: black;
+  --text-links: #d5e8b4;
+  --header-primary: #457b9d;
+  --header-secondary: #457b9d;
+}
+.dark {
+  --color-primary: #24292E;
+  --color-primary-light: #F6F7F9;
+  --color-secondary: #596066;
+  --color-secondary-light: #9EA5AD;
+  --color-accent: black;
+  --text-primary: #F6F7F9;
+  --text-secondary: black;
+  --text-links: #9EA5AD;
+  --header-primary: #F6F7F9;
+  --header-secondary: black;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;

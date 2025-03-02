@@ -1,32 +1,32 @@
+import React from "react";
 import { Link } from 'react-router-dom';
 import './style.scss';
 import { Button } from 'react-bootstrap'
 import Typewriter from 'typewriter-effect';
-import { useBetween } from 'use-between';
-import { themes, useShareableState } from '../../utils/utils';
+import { useDarkMode } from "../../utils/DarkModeContext";
 
-export default function Intro() {
-    const { theme } = useBetween(useShareableState);
+const Intro: React.FC = () => {
+    const { isDarkMode } = useDarkMode();
 
     const colorPhoto = "/images/aiden.png";
     const contrastPhoto = "/images/headshot.png";
 
 
     const reloadSrc = (e?: any) => {
-      if (theme) {
-        e.target.src = colorPhoto;
-      } else {
-        e.target.src = contrastPhoto;
-      }
+        if (isDarkMode) {
+            e.target.src = colorPhoto;
+        } else {
+            e.target.src = contrastPhoto;
+        }
     };
-    
+
 
     return (
         <div className='intro bg-accent w-100 h-100 d-flex flex-column justify-content-center'>
             <div className='d-flex flex-wrap align-items-center justify-content-center main-container'>
                 <div className='headshot-container'>
                     {/* image */}
-                    <img src={theme === themes.contrast ? contrastPhoto : colorPhoto} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
+                    <img src={isDarkMode ? contrastPhoto : colorPhoto} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
                 </div>
                 <div className='text-container'>
                     {/* Intro title */}
@@ -58,3 +58,4 @@ export default function Intro() {
         </div>
     )
 }
+export default Intro;

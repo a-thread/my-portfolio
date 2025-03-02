@@ -1,12 +1,10 @@
-$buttons-height: 24px;
-
-.btn-group-vertical {
+.side-links {
     position: fixed;
     top: 50%;
     right: 0px;
     width: 40px;
     z-index: 9999;
-    margin-top: -$buttons-height;
+    margin-top: -24px;
     border-radius: 15px 0px 0px 15px;
 
     a {
@@ -14,11 +12,12 @@ $buttons-height: 24px;
         display: block;
         text-align: left;
         font-family: Arial, sans-serif;
-        
+
         button {
+            border-radius: 15px 0px 0px 15px;
             background-color: var(--color-accent);
             color: var(--text-primary);
-            
+
             &:hover {
                 background-color: var(--color-secondary);
             }
