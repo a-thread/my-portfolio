@@ -9,7 +9,7 @@
         "password": "password",
         "tech": "React, Supabase, TailwindCss, Typescript, Vite, GH Pages ",
         "github": "https://github.com/a-thread/elysia/",
-        "demo": "https://a-thread.github.io/elysia/"
+        "deployed": "https://a-thread.github.io/elysia/"
     },
     {
         "id": 8,
