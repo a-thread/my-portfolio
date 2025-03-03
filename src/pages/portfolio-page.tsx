@@ -8,6 +8,7 @@ import SideLinks from '../components/SideLinks';
 import Footer from '../components/Footer';
 
 const PortfolioPage: React.FC = () => {
+    window.scrollTo(0, 0);
     return (
         <>
             <Navigation />

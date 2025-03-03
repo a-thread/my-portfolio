@@ -17,7 +17,7 @@ export default defineConfig({
     rollupOptions: {}
   },
   server: {
-    port: 3000, // Default dev server port
+    port: 3001, // Default dev server port
     open: true, // Automatically opens browser on start
     strictPort: true, // Ensures no fallback to another port
     hmr: {

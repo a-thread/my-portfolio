@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 const Bio: React.FC = () => {
     return (
@@ -8,14 +9,18 @@ const Bio: React.FC = () => {
 
             <article>
                 <p className='bio-content'>
-                    Full Stack Engineer with 4+ years of hands on experience designing, building, and implementing applications
-                    using a wide range of technologies and programming languages. Check out my projects page to see a few of my
-                    personal projects!
+                    Full Stack Engineer with 4+ years of experience designing, building, and optimizing
+                    scalable applications across a range of technologies and cloud platforms.
+                    Specializing in full-stack development, cloud architecture, and API integrations,
+                    I bring a user-focused approach to solving complex engineering challenges.
                     <br />
                     <br />
-                    Coming from the nonprofit sector with a focus upon peer support and social justice, I am
-                    passionate about accessibility and approach programming challenges from fresh perspectives
-                    to create collaborative and meaningful web applications.
+                    Coming from the nonprofit sector, I am passionate about accessibility, inclusive design,
+                    and innovative solutions that enhance user experiences. My background in peer support and
+                    social justice gives me a unique perspective in building collaborative and meaningful applications.
+                    <br />
+                    <br />
+                    Check out my <Link to="/projects">projects page</Link> to see some of my work!
                 </p>
             </article>
         </div>
