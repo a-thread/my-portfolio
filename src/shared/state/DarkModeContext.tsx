@@ -12,10 +12,10 @@ interface DarkModeProviderProps {
 }
 
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
-  // Prevent SSR errors by checking for `window` object existence
+  const getSystemTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() =>
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+    typeof window !== "undefined" && getSystemTheme()
   );
 
   const toggleDarkMode = () => {
@@ -30,6 +30,20 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
       root.classList.remove("dark");
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsDarkMode(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   return (
     <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
