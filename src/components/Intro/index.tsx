@@ -37,7 +37,7 @@ const Intro: React.FC = () => {
                     <h2 className='type-container text-secondary-light mt-3'>
                         <Typewriter
                             options={{
-                                strings: ['Full Stack Engineer', 'Dog Dad', 'Artist'],
+                                strings: ['Full Stack Engineer', 'Systems Thinker', 'Building for Impact'],
                                 autoStart: true,
                                 loop: true,
                             }}
