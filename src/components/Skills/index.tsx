@@ -9,24 +9,24 @@ const Skills = () => {
                 <div>
                     <span><i className='fas fa-laptop-code'></i></span>
                     <h4>Front End</h4>
-                    <p>JavaScript/TypeScript, HTML, Sass/CSS, React, Angular, RxJS, NgRx, Redux, Material UI, Bootstrap</p>
+                    <p>JavaScript, TypeScript, HTML5, CSS3/Sass, React, Angular, Next.js, RxJS, NgRx, Redux, Material UI, Bootstrap, Tailwind CSS, Responsive Design</p>
                 </div>
                 <div>
                     <span><i className='fas fa-terminal'></i></span>
                     <h4>Back End</h4>
-                    <p>C#, SQL, NoSQL, Node.js, .NET Core, Entity Framework Core</p>
+                    <p>Node.js, .NET Core, C#, REST APIs, GraphQL, Entity Framework Core, PostgreSQL, SQL Server, Redis, MongoDB</p>
                 </div>
             </div>
             <div className='skillsSection'>
                 <div>
                     <span className='text-primary-light'><i className='fas fa-code-branch'></i></span>
-                    <h4>Tools</h4>
-                    <p>Git/Github, AWS (Lambda microservices, API Gateway, S3), Test Driven Development</p>
+                    <h4>Tools & DevOps</h4>
+                    <p>Git & GitHub, AWS (Lambda, API Gateway, S3, Aurora RDS, SNS/SQS), Terraform, CI/CD pipelines, Jest, Docker, TDD & Unit Testing, Google Analytics (GA4), Pendo</p>
                 </div>
                 <div className='soft'>
                     <span className='text-primary-light'><i className='fas fa-users-cog'></i></span>
                     <h4>Soft Skills</h4>
-                    <p>Critical Thinking, Communication, Resourcefulness, Resilience, Organization, Flexibility, Passion for Learning</p>
+                    <p>Collaborative Leadership, Critical Thinking, Effective Communication, Resourcefulness, Resilience, Mentorship, Organization, Adaptability, Continuous Learning</p>
                 </div>
             </div>
         </div>
