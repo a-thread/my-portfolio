@@ -3,6 +3,7 @@ import Feedback from 'react-bootstrap/esm/Feedback';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Highlights from '../components/Highlights';
 import Intro from '../components/Intro';
 import Navigation from '../components/Navigation';
 import SideLinks from '../components/SideLinks';
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
                 <Intro />
             </div>
             <Bio />
+            <Highlights />
             <Skills />
             <Feedback />
             <Contact />

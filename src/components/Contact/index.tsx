@@ -29,14 +29,14 @@ const Contact: React.FC = () => {
                     {/* Email */}
                     <a className='contact-item' href='mailto:aiden.threadgoode@gmail.com'>
                         <IconContext.Provider
-                            value={{ color: 'bg-accent' }}>
+                            value={{ color: 'white' }}>
                             <MdEmail />
                         </IconContext.Provider> aiden.threadgoode@gmail.com
                     </a>
                     {/* Phone */}
                     <a className='contact-item' href='tel:2077491341'>
                         <IconContext.Provider
-                            value={{ color: 'bg-accent' }}>
+                            value={{ color: 'white' }}>
                             <BsTelephone />
                         </IconContext.Provider> 207-749-1341
                     </a>

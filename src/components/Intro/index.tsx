@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import './style.scss';
 import { Button } from 'react-bootstrap'
@@ -7,26 +7,27 @@ import { useDarkMode } from "@shared/state/DarkModeContext";
 
 const Intro: React.FC = () => {
     const { isDarkMode } = useDarkMode();
+    const [imgFailed, setImgFailed] = useState(false);
 
     const colorPhoto = "/images/aiden.png";
     const contrastPhoto = "/images/headshot.png";
 
-
-    const reloadSrc = (e?: any) => {
-        if (isDarkMode) {
-            e.target.src = colorPhoto;
-        } else {
-            e.target.src = contrastPhoto;
-        }
+    const reloadSrc = () => {
+        // If the theme-matched photo fails to load, fall back once to the
+        // other photo rather than looping or showing a mismatched theme.
+        if (!imgFailed) setImgFailed(true);
     };
 
+    const activeSrc = imgFailed
+        ? (isDarkMode ? colorPhoto : contrastPhoto)
+        : (isDarkMode ? contrastPhoto : colorPhoto);
 
     return (
         <div className='intro bg-accent w-100 h-100 d-flex flex-column justify-content-center'>
             <div className='d-flex flex-wrap align-items-center justify-content-center main-container'>
                 <div className='headshot-container'>
                     {/* image */}
-                    <img src={isDarkMode ? contrastPhoto : colorPhoto} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
+                    <img src={activeSrc} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
                 </div>
                 <div className='text-container'>
                     {/* Intro title */}
@@ -37,7 +38,7 @@ const Intro: React.FC = () => {
                     <h2 className='type-container text-secondary-light mt-3'>
                         <Typewriter
                             options={{
-                                strings: ['Full Stack Engineer', 'Systems Thinker', 'Building for Impact'],
+                                strings: ['Senior Software Engineer', 'Angular & .NET / AWS', 'Building for Scale'],
                                 autoStart: true,
                                 loop: true,
                             }}

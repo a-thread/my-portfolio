@@ -1,19 +1,13 @@
-div.skillsContainer {
+div.highlightsContainer {
     padding: 1rem 1rem 4rem 1rem;
 
     h3 {
         text-align: center;
         margin: 20px 0 50px 0;
         color: var(--color-accent);
-
-        @media screen and (min-width: 800px) {
-            br {
-                display: none;
-            }
-        }
     }
 
-    div.skillsGrid {
+    div.highlightsGrid {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -50,7 +44,7 @@ div.skillsContainer {
         flex-direction: column;
         align-items: center;
 
-        div.skillsGrid div {
+        div.highlightsGrid div {
             width: 100%;
         }
     }
