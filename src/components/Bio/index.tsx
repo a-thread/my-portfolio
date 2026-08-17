@@ -9,13 +9,13 @@ const Bio: React.FC = () => {
 
             <article>
                 <p className='bio-content'>
-                    Full Stack Engineer with 4+ years of experience designing, building, and optimizing scalable applications across modern tech stacks and cloud platforms. I specialize in full-stack development, cloud architecture, and API integrations, bringing a user-centered approach to solving complex engineering challenges.
+                    Senior Software Engineer with 5+ years of experience architecting and shipping full-stack systems on Angular, TypeScript, C#/.NET Core, and AWS. I focus on building reusable engineering patterns—frameworks, standards, and pipelines that make an entire team faster, not just my own code.
                     <br />
                     <br />
-                    With a background in the nonprofit sector, I'm passionate about accessibility, inclusive design, and building software that creates real, measurable impact. My experience in peer support and social justice informs a collaborative, people-first approach to engineering—and fuels my commitment to creating meaningful, ethical technology.
+                    Recent work includes re-architecting a nightly batch process into a real-time AWS Lambda/SNS/S3 pipeline, and building a DTO/Validator/Filter factory system that cut feature build time by roughly 80% for my team. I also mentor engineers through code review and contribute to my company's enterprise agentic-AI pilot program, helping author governance and control standards for responsible AI adoption.
                     <br />
                     <br />
-                    Explore my <Link to="/projects">projects page</Link> to see what I've been working on!
+                    Explore my <Link to="/projects">projects page</Link> to see what I've been building outside of work.
                 </p>
             </article>
         </div>
