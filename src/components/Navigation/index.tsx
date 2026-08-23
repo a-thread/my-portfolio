@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Hamburger from 'hamburger-react';
 import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
 import { useDarkMode } from '@shared/state/DarkModeContext';
@@ -20,11 +20,25 @@ const PAGE_LINKS = [
 const Navigation = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const onHome = pathname === '/';
-  const sectionHref = (hash: string) => (onHome ? `#${hash}` : `/#${hash}`);
   const close = () => setIsOpen(false);
+
+  // Plain `#hash` hrefs collide with HashRouter's own routing (it tries to
+  // match the fragment as a path and unmounts everything when it can't), so
+  // section links are handled entirely in JS: scroll directly when already on
+  // the home page, or navigate there and let HomePage scroll after mount.
+  const goToSection = (hash: string) => (event: React.MouseEvent) => {
+    event.preventDefault();
+    close();
+    if (onHome) {
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate('/', { state: { scrollTo: hash } });
+    }
+  };
 
   return (
     <nav className="site-nav">
@@ -51,7 +65,7 @@ const Navigation = () => {
         >
           <div className="site-nav__anchors">
             {SECTION_LINKS.map(({ hash, label }) => (
-              <a key={hash} href={sectionHref(hash)} onClick={close}>{label}</a>
+              <a key={hash} href="/" onClick={goToSection(hash)}>{label}</a>
             ))}
           </div>
           <div className="site-nav__divider" />

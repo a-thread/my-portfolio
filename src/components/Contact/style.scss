@@ -38,12 +38,16 @@
   &__email {
     display: inline-block;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--band-text);
     margin-top: 28px;
     border-bottom: 2px solid var(--band-border);
     word-break: break-word;
+
+    @media screen and (min-width: 480px) {
+      font-size: 22px;
+    }
 
     @media screen and (min-width: 900px) {
       font-size: 28px;
