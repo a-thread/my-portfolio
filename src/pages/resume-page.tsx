@@ -1,5 +1,6 @@
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import { SITE } from '@shared/data/site';
 import './style.scss';
 
 const ResumePage = () => {
@@ -10,7 +11,7 @@ const ResumePage = () => {
                 <a
                     rel="noreferrer"
                     target="_blank"
-                    href="https://docs.google.com/document/d/1sA68wHHfIcCFOtg2DxkTUiGCc7eReWvk16JM7kYO8r0/export?format=pdf"
+                    href={SITE.resumeDownloadUrl}
                     className="btn btn-primary"
                 >
                     Download résumé
@@ -18,7 +19,7 @@ const ResumePage = () => {
             </div>
             <div className="resume-page__frame-wrap">
                 <div className="resume-page__frame">
-                    <iframe title="Resume" src="https://docs.google.com/document/d/e/2PACX-1vRIQQCPL2xGJ_e0dKuza_VkhwG38bnqJKSQ8q6j-3X2Z491wZPrUlfXyMpmVQNVRatIxdB4h41zVhga/pub?embedded=true"></iframe>
+                    <iframe title="Resume" src={SITE.resumeEmbedUrl}></iframe>
                 </div>
             </div>
             <Footer />

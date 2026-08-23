@@ -9,25 +9,19 @@
     @media screen and (min-width: 900px) {
       padding: 100px 60px;
     }
-
-    h2 {
-      font-size: 30px;
-      font-weight: 700;
-      color: var(--band-text);
-      margin-top: 18px;
-
-      @media screen and (min-width: 900px) {
-        font-size: 38px;
-      }
-    }
   }
 
-  &__eyebrow {
-    justify-content: center;
-    color: var(--band-accent);
+  &__header {
+    .eyebrow {
+      color: var(--band-accent);
+    }
 
     .eyebrow-mark {
       background: var(--band-accent);
+    }
+
+    h2 {
+      color: var(--band-text);
     }
   }
 

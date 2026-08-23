@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from '../icons';
 import { IProject } from './project.model';
 import './style.scss';
 
@@ -19,13 +20,13 @@ const PortCard = ({ image, title, deployed, demo, github, description, tech }: I
           {deployed && (
             <a href={deployed} target="_blank" rel="noreferrer" className="project-card__link">
               Live app
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              <ArrowUpRightIcon size={13} />
             </a>
           )}
           {demo && (
             <a href={demo} target="_blank" rel="noreferrer" className="project-card__link">
               Demo
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              <ArrowUpRightIcon size={13} />
             </a>
           )}
           <a href={github} target="_blank" rel="noreferrer" className="project-card__link project-card__link--muted">GitHub</a>

@@ -13,21 +13,18 @@
     flex-direction: column;
     gap: 24px;
 
-    h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-top: 16px;
-      line-height: 1.2;
-
-      @media screen and (min-width: 900px) {
-        font-size: 34px;
-      }
-    }
-
     @media screen and (min-width: 900px) {
       display: grid;
       grid-template-columns: 360px 1fr;
       gap: 80px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 0;
+
+    h2 {
+      line-height: 1.2;
     }
   }
 

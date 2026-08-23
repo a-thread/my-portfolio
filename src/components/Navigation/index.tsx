@@ -1,17 +1,29 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Hamburger from "hamburger-react";
-import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
-import { useDarkMode } from "@shared/state/DarkModeContext";
-import "./style.scss";
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import Hamburger from 'hamburger-react';
+import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
+import { useDarkMode } from '@shared/state/DarkModeContext';
+import './style.scss';
 
-const Navigation: React.FC = () => {
+const SECTION_LINKS = [
+  { hash: 'impact', label: 'Impact' },
+  { hash: 'skills', label: 'Toolkit' },
+  { hash: 'about', label: 'About' },
+  { hash: 'contact', label: 'Contact' },
+];
+
+const PAGE_LINKS = [
+  { to: '/projects', label: 'Projects' },
+  { to: '/resume', label: 'Résumé' },
+];
+
+const Navigation = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const onHome = pathname === "/";
-  const anchor = (hash: string) => (onHome ? `#${hash}` : `/#${hash}`);
+  const onHome = pathname === '/';
+  const sectionHref = (hash: string) => (onHome ? `#${hash}` : `/#${hash}`);
   const close = () => setIsOpen(false);
 
   return (
@@ -24,32 +36,37 @@ const Navigation: React.FC = () => {
         </Link>
 
         <div className="site-nav__hamburger">
-          <Hamburger toggled={isOpen} toggle={setIsOpen} size={22} color="var(--text)" />
+          <Hamburger
+            toggled={isOpen}
+            toggle={setIsOpen}
+            size={22}
+            color="var(--text)"
+            label={isOpen ? 'Close menu' : 'Open menu'}
+          />
         </div>
 
-        <div className={`site-nav__panel${isOpen ? " site-nav__panel--open" : ""}`}>
+        <div
+          id="site-nav-panel"
+          className={`site-nav__panel${isOpen ? ' site-nav__panel--open' : ''}`}
+        >
           <div className="site-nav__anchors">
-            <a href={anchor("impact")} onClick={close}>Impact</a>
-            <a href={anchor("skills")} onClick={close}>Toolkit</a>
-            <a href={anchor("about")} onClick={close}>About</a>
-            <a href={anchor("contact")} onClick={close}>Contact</a>
+            {SECTION_LINKS.map(({ hash, label }) => (
+              <a key={hash} href={sectionHref(hash)} onClick={close}>{label}</a>
+            ))}
           </div>
           <div className="site-nav__divider" />
           <div className="site-nav__pages">
-            <Link
-              to="/projects"
-              className={`btn btn-secondary${pathname === "/projects" ? " site-nav__page--active" : ""}`}
-              onClick={close}
-            >
-              Projects
-            </Link>
-            <Link
-              to="/resume"
-              className={`btn btn-secondary${pathname === "/resume" ? " site-nav__page--active" : ""}`}
-              onClick={close}
-            >
-              Résumé
-            </Link>
+            {PAGE_LINKS.map(({ to, label }) => (
+              <Link
+                key={to}
+                to={to}
+                className={`btn btn-secondary${pathname === to ? ' site-nav__page--active' : ''}`}
+                aria-current={pathname === to ? 'page' : undefined}
+                onClick={close}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
           <button className="icon-btn" aria-label="toggle dark mode" onClick={toggleDarkMode}>
             {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}

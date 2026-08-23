@@ -8,25 +8,6 @@
     padding: 100px 0;
   }
 
-  &__head {
-    max-width: 600px;
-    margin-bottom: 40px;
-
-    h2 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-top: 16px;
-
-      @media screen and (min-width: 900px) {
-        font-size: 34px;
-      }
-    }
-
-    @media screen and (min-width: 900px) {
-      margin-bottom: 52px;
-    }
-  }
-
   &__grid {
     display: grid;
     grid-template-columns: 1fr;

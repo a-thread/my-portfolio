@@ -1,10 +1,6 @@
-import "./style.scss";
-
-const testimonials = [
-  "Aiden is always in a good mood, making him a pleasure to work with. Would gladly work with him again.",
-  "He is always on the lookout for someone not feeling good about themselves — looking out for the dignity of every person on the team.",
-  "Aiden is just incredibly kind and patient with everything, toward everyone.",
-];
+import SectionHeader from '../SectionHeader';
+import { testimonials } from '@shared/data/testimonials';
+import './style.scss';
 
 const QuoteMark = () => (
   <svg width="26" height="20" viewBox="0 0 24 24" className="testimonials__quote-mark">
@@ -19,10 +15,7 @@ const Feedback = () => {
   return (
     <div id="feedback" className="testimonials">
       <div className="wrap">
-        <div className="testimonials__head">
-          <div className="eyebrow"><span className="eyebrow-mark" />Testimonials</div>
-          <h2>Kind words from colleagues</h2>
-        </div>
+        <SectionHeader eyebrow="Testimonials" heading="Kind words from colleagues" />
         <div className="testimonials__grid">
           {testimonials.map((quote) => (
             <div className="testimonials__card" key={quote}>

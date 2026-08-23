@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import data from '@shared/data/data.json';
+import { SITE } from '@shared/data/site';
 import PortCard from '../components/PortCard';
 import { IProject } from '../components/PortCard/project.model';
+import { ArrowUpRightIcon, FolderIcon } from '../components/icons';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import './style.scss';
@@ -34,19 +36,16 @@ const PortfolioPage = () => {
                     ))}
                     <a
                         className="projects-page__more"
-                        href="https://github.com/a-thread"
+                        href={SITE.github}
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                            <rect x="3" y="7" width="18" height="13" rx="2" />
-                            <path d="M3 7l2-3h5l2 3" />
-                        </svg>
+                        <FolderIcon />
                         <h3>{moreCount} more projects</h3>
                         <p>View the full archive on GitHub</p>
                         <span className="projects-page__more-link">
-                            github.com/a-thread
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>
+                            {SITE.githubHandle}
+                            <ArrowUpRightIcon size={13} />
                         </span>
                     </a>
                 </div>

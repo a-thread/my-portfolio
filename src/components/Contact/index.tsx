@@ -1,27 +1,28 @@
-import { BsGithub, BsTelephone } from "react-icons/bs";
-import { FaLinkedinIn } from "react-icons/fa";
-import "./style.scss";
+import { BsGithub, BsTelephone } from 'react-icons/bs';
+import { FaLinkedinIn } from 'react-icons/fa';
+import SectionHeader from '../SectionHeader';
+import { SITE, emailHref } from '@shared/data/site';
+import './style.scss';
 
 const Contact = () => {
   return (
     <div id="contact" className="contact-band">
       <div className="wrap contact-band__inner">
-        <div className="eyebrow contact-band__eyebrow"><span className="eyebrow-mark" />Get in touch</div>
-        <h2>Let's build something great.</h2>
+        <SectionHeader eyebrow="Get in touch" heading="Let's build something great." align="center" className="contact-band__header" />
         <p className="contact-band__lede">Open to senior/staff engineering roles and interesting collaborations.</p>
-        <a className="contact-band__email" href="mailto:aiden.threadgoode@gmail.com">aiden.threadgoode@gmail.com</a>
+        <a className="contact-band__email" href={emailHref}>{SITE.email}</a>
         <div className="contact-band__chips">
-          <a className="contact-band__chip" href="tel:2077491341">
+          <a className="contact-band__chip" href={SITE.phoneHref}>
             <BsTelephone />
-            207-749-1341
+            {SITE.phone}
           </a>
-          <a className="contact-band__chip" href="https://github.com/a-thread" target="_blank" rel="noreferrer">
+          <a className="contact-band__chip" href={SITE.github} target="_blank" rel="noreferrer">
             <BsGithub />
-            github.com/a-thread
+            {SITE.githubHandle}
           </a>
-          <a className="contact-band__chip" href="https://www.linkedin.com/in/a-thread" target="_blank" rel="noreferrer">
+          <a className="contact-band__chip" href={SITE.linkedin} target="_blank" rel="noreferrer">
             <FaLinkedinIn />
-            linkedin.com/in/a-thread
+            {SITE.linkedinHandle}
           </a>
         </div>
       </div>
