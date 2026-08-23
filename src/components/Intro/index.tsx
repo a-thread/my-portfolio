@@ -1,59 +1,54 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BsGithub } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import "./style.scss";
-import { Button } from "react-bootstrap";
-import Typewriter from "typewriter-effect";
 
 const Intro: React.FC = () => {
   return (
-    <div className="intro bg-accent w-100 h-100 d-flex flex-column justify-content-center">
-      <div className="d-flex flex-wrap align-items-center justify-content-center main-container">
-        <div className="headshot-container">
-          {/* image */}
-          <img
-            src="/images/headshot.png"
-            className="img-fluid animate__animated animate__rollIn custom-shadow"
-            alt="Headshot of Aiden"
-          />
-        </div>
-        <div className="text-container">
-          {/* Intro title */}
-          <h1 className="text-secondary-light intro-title animate__animated animate__backInLeft">
-            Hi, I'm <span className="text-primary-light">Aiden.</span>
+    <div className="hero" id="hero">
+      <div className="wrap hero__grid">
+        <div className="hero__copy">
+          <div className="eyebrow">
+            <span className="eyebrow-mark" />
+            Senior Software Engineer
+          </div>
+          <h1 className="hero__headline">
+            Full-stack systems,
+            <br />
+            built to <span className="hero__accent">scale.</span>
           </h1>
-          {/* Typewriter effect*/}
-          <h2 className="type-container text-secondary-light mt-3">
-            <Typewriter
-              options={{
-                strings: [
-                  "Senior Software Engineer",
-                  "Angular & .NET / AWS",
-                  "Building for Scale",
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </h2>
-          {/* Project button */}
-          <Link to="/projects">
-            <Button
-              variant="flat"
-              className="mt-3 custom-shadow projects animate__animated animate__backInRight"
-            >
-              {" "}
-              recent projects{" "}
-            </Button>
-          </Link>
+          <p className="hero__subhead">
+            I'm Aiden Threadgoode. I architect and ship full-stack systems on Angular, TypeScript, C#/.NET Core, and AWS — and build the reusable patterns that make an entire team faster.
+          </p>
+          <div className="hero__ctas">
+            <Link to="/projects" className="btn btn-primary">
+              View projects
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg>
+            </Link>
+            <Link to="/resume" className="btn btn-secondary">Download résumé</Link>
+          </div>
+          <div className="hero__socials">
+            <a className="icon-btn" aria-label="GitHub" href="https://github.com/a-thread" target="_blank" rel="noreferrer">
+              <BsGithub />
+            </a>
+            <a className="icon-btn" aria-label="LinkedIn" href="https://www.linkedin.com/in/a-thread" target="_blank" rel="noreferrer">
+              <FaLinkedinIn />
+            </a>
+            <a className="icon-btn" aria-label="Email" href="mailto:aiden.threadgoode@gmail.com">
+              <MdEmail />
+            </a>
+          </div>
+        </div>
+        <div className="hero__photo">
+          <div className="hero__photo-tint" />
+          <img src="/images/headshot.png" alt="Headshot of Aiden Threadgoode" />
+          <div className="hero__photo-badge mono">Angular &middot; .NET &middot; AWS</div>
         </div>
       </div>
-      {/* Bouncing arrow */}
-      <a href="#bio" aria-label="link to bio area">
-        <div className="bg-accent arrow text-white text-center w-100 mt-10">
-          <i className="fas fa-chevron-down" />
-        </div>
-      </a>
     </div>
   );
 };
+
 export default Intro;

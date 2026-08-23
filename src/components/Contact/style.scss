@@ -1,44 +1,79 @@
-#contact {
-    
-    h3 {
-        text-align: right;
-        margin-top: 0;
-        color: white;
+.contact-band {
+  background: var(--band-bg);
+  border-top: 1px solid var(--border);
+
+  &__inner {
+    padding: 64px 24px;
+    text-align: center;
+
+    @media screen and (min-width: 900px) {
+      padding: 100px 60px;
     }
 
-    div.contact-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        font-family: 'Open Sans', sans-serif;
-        max-width: 50vw;
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--band-text);
+      margin-top: 18px;
 
-        @media screen and (max-width: 900px) {
-            max-width: 80vw;
-        }
-
-        a.contact-item {
-            align-items: flex-start;
-            list-style-type: none;
-            color: white;
-            font-size: large;
-            padding: .5rem;
-            
-            @media screen and (max-width: 300px) {
-                font-size: 6vw;
-                overflow-wrap: break-word;
-                padding: 0;
-            }
-
-            &:hover {
-                color: var(--color-primary-light);
-            }
-
-            svg {
-                margin: 5px;
-                font-size: larger;
-            }
-        }
+      @media screen and (min-width: 900px) {
+        font-size: 38px;
+      }
     }
+  }
+
+  &__eyebrow {
+    justify-content: center;
+    color: var(--band-accent);
+
+    .eyebrow-mark {
+      background: var(--band-accent);
+    }
+  }
+
+  &__lede {
+    font-size: 16px;
+    color: var(--band-text-muted);
+    margin-top: 14px;
+
+    @media screen and (min-width: 900px) {
+      font-size: 17px;
+    }
+  }
+
+  &__email {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--band-text);
+    margin-top: 28px;
+    border-bottom: 2px solid var(--band-border);
+    word-break: break-word;
+
+    @media screen and (min-width: 900px) {
+      font-size: 28px;
+    }
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  &__chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--band-chip-bg);
+    border: 1px solid var(--band-chip-border);
+    color: var(--band-chip-text);
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+  }
 }

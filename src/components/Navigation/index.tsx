@@ -1,63 +1,63 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import Hamburger from 'hamburger-react';
-import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
-import './style.scss';
-import { IconContext } from "react-icons/lib";
+import { Link, useLocation } from "react-router-dom";
+import Hamburger from "hamburger-react";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { useDarkMode } from "@shared/state/DarkModeContext";
+import "./style.scss";
 
 const Navigation: React.FC = () => {
-    const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { pathname } = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [isClosed, setClosed] = useState(false)
+  const onHome = pathname === "/";
+  const anchor = (hash: string) => (onHome ? `#${hash}` : `/#${hash}`);
+  const close = () => setIsOpen(false);
 
-    return (
-        <Navbar className='bg-accent py-2 px-3 m-0 w-100' expand='lg'>
-            <Navbar.Brand href='/'>
-                <h1 className='text-secondary-light'>
-                    <span className='text-primary-light'>a-</span>
-                    thread
-                </h1>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' className="text-white">
-                <Hamburger toggled={isClosed} toggle={setClosed} />
-            </Navbar.Toggle>
+  return (
+    <nav className="site-nav">
+      <div className="wrap site-nav__inner">
+        <Link to="/" className="site-nav__logo" onClick={close}>
+          <span>a</span>
+          <span className="site-nav__logo-dot">&middot;</span>
+          <span className="site-nav__logo-rest">thread</span>
+        </Link>
 
-            <Navbar.Collapse id='basic-navbar-nav'>
-                <Nav className='w-100 d-flex justify-content-end align-items-center'>
-                    <NavLink to='/' className={(navData) => navData.isActive ? ' selected' : ''}>
-                        home
-                    </NavLink>
-                    <NavLink to='/projects' className={(navData) => navData.isActive ? ' selected' : ''}>
-                        projects
-                    </NavLink>
-                    <NavLink to='/resume' className={(navData) => navData.isActive ? ' selected' : ''}>
-                        resume
-                    </NavLink>
-                    <div className='d-flex flex-end'>
-                        <Button
-                            aria-label="toggle dark mode"
-                            onClick={toggleDarkMode}
-                        >
-                            {isDarkMode ? (
-                                <IconContext.Provider
-                                    value={{ color: 'white' }}>
-                                    <BsFillSunFill />
-                                </IconContext.Provider>
-                            ) : (
-                                <IconContext.Provider
-                                    value={{ color: 'white' }}>
-                                    <BsFillMoonStarsFill />
-                                </IconContext.Provider>
-                            )}
-                            <span className="d-lg-none d-md-block">Switch Mode</span>
-                        </Button>
-                    </div>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    )
-}
+        <div className="site-nav__hamburger">
+          <Hamburger toggled={isOpen} toggle={setIsOpen} size={22} color="var(--text)" />
+        </div>
+
+        <div className={`site-nav__panel${isOpen ? " site-nav__panel--open" : ""}`}>
+          <div className="site-nav__anchors">
+            <a href={anchor("impact")} onClick={close}>Impact</a>
+            <a href={anchor("skills")} onClick={close}>Toolkit</a>
+            <a href={anchor("about")} onClick={close}>About</a>
+            <a href={anchor("contact")} onClick={close}>Contact</a>
+          </div>
+          <div className="site-nav__divider" />
+          <div className="site-nav__pages">
+            <Link
+              to="/projects"
+              className={`btn btn-secondary${pathname === "/projects" ? " site-nav__page--active" : ""}`}
+              onClick={close}
+            >
+              Projects
+            </Link>
+            <Link
+              to="/resume"
+              className={`btn btn-secondary${pathname === "/resume" ? " site-nav__page--active" : ""}`}
+              onClick={close}
+            >
+              Résumé
+            </Link>
+          </div>
+          <button className="icon-btn" aria-label="toggle dark mode" onClick={toggleDarkMode}>
+            {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navigation;

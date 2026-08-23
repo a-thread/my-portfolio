@@ -1,43 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+.about {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 56px 0;
 
-#bio, #contact, #feedback {
+  @media screen and (min-width: 900px) {
+    padding: 100px 0;
+  }
+
+  &__grid {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 5rem 0;
+    flex-direction: column;
+    gap: 24px;
 
-    @media screen and (max-width: 600px) {
-        padding: 3rem 0;
-    }
-}
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 16px;
+      line-height: 1.2;
 
-h3.about-title,
-#feedback > h3 {
-   margin-top: 0;
-   color: var(--color-accent);
-}
+      @media screen and (min-width: 900px) {
+        font-size: 34px;
+      }
+    }
 
-p.bio-content, div.contact-info, article.feedback {
-    font-family: 'Open Sans', sans-serif;
-    max-width: 50vw;
-    padding: 0 0 0 5rem;
-    
-    @media screen and (max-width: 900px) {
-        max-width: 80vw;
-        padding: 0;
+    @media screen and (min-width: 900px) {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 80px;
     }
-}
+  }
 
-@media screen and (max-width: 800px) {
-    #bio, #feedback, #contact {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text-muted);
+    max-width: 640px;
+
+    @media screen and (min-width: 900px) {
+      font-size: 17px;
+      gap: 22px;
     }
-    h3.about-title {
-        text-align: center;
-    }
-    p.bio-content, p.feedback, div.contact-info {
-        padding: 0;
-    }
+  }
 }

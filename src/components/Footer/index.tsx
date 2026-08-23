@@ -1,17 +1,17 @@
-import React from "react";
-import { BsFillSuitHeartFill } from 'react-icons/bs';
-import { IconContext } from "react-icons/lib";
+import "./style.scss";
 
-const Footer: React.FC = () => {
-    return (
-        <footer className='bg-accent w-100 d-flex align-items-center justify-content-center text-primary-light'>
-            <p className='mb-0 py-2'>built with</p>
-            <IconContext.Provider value={{ color: '#C054BE' }}>
-                <div className="px-2"><BsFillSuitHeartFill /></div>
-            </IconContext.Provider>
-            <p className='mb-0 py-2'>by <a className="text-links" href="https://github.com/a-thread" target="_blank" rel="noreferrer">a-thread</a></p>
-        </footer>
-    );
+const Footer = () => {
+  return (
+    <footer className="site-footer">
+      <div className="wrap site-footer__inner">
+        <span>&copy; 2026 Aiden Threadgoode — built with React, TypeScript &amp; Vite</span>
+        <div className="site-footer__links">
+          <a href="https://github.com/a-thread" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/a-thread" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

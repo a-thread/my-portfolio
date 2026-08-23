@@ -1,9 +1,59 @@
-#feedback {
-    background-color: var(--color-primary)
+.testimonials {
+  background: var(--bg);
+  padding: 64px 0;
+
+  @media screen and (min-width: 900px) {
+    padding: 100px 0;
+  }
+
+  &__head {
+    max-width: 600px;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 16px;
+
+      @media screen and (min-width: 900px) {
+        font-size: 34px;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media screen and (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  &__card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
 
     p {
-        font-size: medium;
-        font-weight: 600;
-        font-style: italic;
+      font-size: 15.5px;
+      line-height: 1.65;
+      font-style: italic;
+      color: var(--text);
     }
+  }
+
+  &__quote-mark {
+    color: var(--teal);
+    opacity: 0.65;
+    margin-bottom: 14px;
+    display: block;
+  }
 }
