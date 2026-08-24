@@ -14,7 +14,7 @@ export const skillGroups: ISkillGroup[] = [
   },
   {
     label: 'Tools & DevOps',
-    items: ['Git', 'AWS Lambda', 'S3 / SNS / SQS', 'Terraform', 'CI/CD', 'Jest', 'Docker'],
+    items: ['Git', 'AWS Lambda', 'S3 / SNS / SQS', 'Terraform', 'Scalr', 'Datadog', 'CI/CD', 'Jest', 'Docker'],
   },
   {
     label: 'Soft Skills',
