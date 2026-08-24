@@ -7,7 +7,7 @@ const ResumePage = () => {
     return (
         <div className="resume-page">
             <Navigation />
-            <div className="resume-page__actions">
+            <div className="resume-page-actions">
                 <a
                     rel="noreferrer"
                     target="_blank"
@@ -17,8 +17,8 @@ const ResumePage = () => {
                     Download résumé
                 </a>
             </div>
-            <div className="resume-page__frame-wrap">
-                <div className="resume-page__frame">
+            <div className="resume-page-frame-wrap">
+                <div className="resume-page-frame">
                     <iframe title="Resume" src={SITE.resumeEmbedUrl}></iframe>
                 </div>
             </div>

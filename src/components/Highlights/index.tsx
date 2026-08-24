@@ -7,10 +7,10 @@ const Highlights = () => {
     <div id="impact" className="highlights">
       <div className="wrap">
         <SectionHeader eyebrow="Impact" heading="Career highlights" />
-        <div className="highlights__grid">
+        <div className="highlights-grid">
           {highlights.map((item) => (
-            <div className="highlights__card" key={item.title}>
-              <div className={`highlights__icon highlights__icon--${item.tint}`}>{item.icon}</div>
+            <div className="highlights-card" key={item.title}>
+              <div className={`highlights-icon highlights-icon--${item.tint}`}>{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>

@@ -7,11 +7,11 @@ const Skills = () => {
     <div id="skills" className="toolkit">
       <div className="wrap">
         <SectionHeader eyebrow="Toolkit" heading="Tools & technologies" />
-        <div className="toolkit__grid">
+        <div className="toolkit-grid">
           {skillGroups.map((group) => (
             <div key={group.label}>
               <h3>{group.label}</h3>
-              <div className="toolkit__pills">
+              <div className="toolkit-pills">
                 {group.items.map((item) => (
                   <span className="pill" key={item}>{item}</span>
                 ))}

@@ -6,7 +6,7 @@
     padding: 100px 0;
   }
 
-  &__grid {
+  &-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
@@ -30,7 +30,7 @@
     }
   }
 
-  &__pills {
+  &-pills {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

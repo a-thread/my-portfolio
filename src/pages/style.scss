@@ -2,7 +2,7 @@
 .projects-page {
   background: var(--bg);
 
-  &__header {
+  &-header {
     padding: 64px 24px 40px;
     max-width: 760px;
 
@@ -32,7 +32,7 @@
     }
   }
 
-  &__grid {
+  &-grid {
     padding-bottom: 72px;
     display: grid;
     grid-template-columns: 1fr;
@@ -52,7 +52,7 @@
     }
   }
 
-  &__more {
+  &-more {
     background: var(--surface);
     border: 1px dashed var(--border);
     border-radius: 14px;
@@ -82,7 +82,7 @@
     }
   }
 
-  &__more-link {
+  &-more-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -98,19 +98,19 @@
   background: var(--surface-2);
   min-height: calc(100vh - 76px);
 
-  &__actions {
+  &-actions {
     display: flex;
     justify-content: center;
     padding: 32px 24px;
   }
 
-  &__frame-wrap {
+  &-frame-wrap {
     display: flex;
     justify-content: center;
     padding: 0 24px 64px;
   }
 
-  &__frame {
+  &-frame {
     width: 100%;
     max-width: 800px;
     height: 2100px;
