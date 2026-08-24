@@ -141,23 +141,28 @@ p {
   white-space: nowrap;
   border: none;
   cursor: pointer;
-  transition: opacity 0.15s ease;
-
-  &:hover {
-    opacity: 0.88;
-    color: inherit;
-  }
+  transition: opacity 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .btn-primary {
   background: var(--btn-primary-bg);
   color: var(--btn-primary-text);
+
+  &:hover {
+    opacity: 0.88;
+    color: #FFFFFF;
+  }
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--text);
   border: 1.5px solid var(--border);
+
+  &:hover {
+    color: var(--teal);
+    border-color: var(--teal);
+  }
 }
 
 .pill {
