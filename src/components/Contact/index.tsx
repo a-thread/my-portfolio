@@ -1,49 +1,32 @@
-import React from "react";
-import { BsGithub, BsTelephone } from 'react-icons/bs'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { IconContext } from 'react-icons/lib';
-import { MdEmail } from 'react-icons/md';
+import { BsGithub, BsTelephone } from 'react-icons/bs';
+import { FaLinkedinIn } from 'react-icons/fa';
+import SectionHeader from '../SectionHeader';
+import { SITE, emailHref } from '@shared/data/site';
 import './style.scss';
 
-const Contact: React.FC = () => {
-    return (
-        <div id='contact' className='bg-accent'>
-            <h3 className='title'>Contact</h3>
-
-            <article>
-                <div className='contact-info'>
-                    {/* Github */}
-                    <a className='contact-item' href='https://github.com/a-thread' rel='noreferrer' target='_blank'>
-                        <IconContext.Provider
-                            value={{ color: 'white' }}>
-                            <BsGithub />
-                        </IconContext.Provider> github.com/a-thread
-                    </a>
-                    {/* LinkedIn */}
-                    <a className='contact-item' href='https://www.linkedin.com/in/a-thread' rel='noreferrer' target='_blank'>
-                        <IconContext.Provider
-                            value={{ color: 'white' }}>
-                            <FaLinkedinIn />
-                        </IconContext.Provider> linkedin.com/in/a-thread/
-                    </a>
-                    {/* Email */}
-                    <a className='contact-item' href='mailto:aiden.threadgoode@gmail.com'>
-                        <IconContext.Provider
-                            value={{ color: 'white' }}>
-                            <MdEmail />
-                        </IconContext.Provider> aiden.threadgoode@gmail.com
-                    </a>
-                    {/* Phone */}
-                    <a className='contact-item' href='tel:2077491341'>
-                        <IconContext.Provider
-                            value={{ color: 'white' }}>
-                            <BsTelephone />
-                        </IconContext.Provider> 207-749-1341
-                    </a>
-                </div>
-            </article>
+const Contact = () => {
+  return (
+    <div id="contact" className="contact-band">
+      <div className="wrap inner">
+        <SectionHeader eyebrow="Get in touch" heading="Let's build something remarkable." align="center" className="header" />
+        <a className="email" href={emailHref}>{SITE.email}</a>
+        <div className="chips">
+          <a className="chip" href={SITE.phoneHref}>
+            <BsTelephone />
+            {SITE.phone}
+          </a>
+          <a className="chip" href={SITE.github} target="_blank" rel="noreferrer">
+            <BsGithub />
+            {SITE.githubHandle}
+          </a>
+          <a className="chip" href={SITE.linkedin} target="_blank" rel="noreferrer">
+            <FaLinkedinIn />
+            {SITE.linkedinHandle}
+          </a>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Contact;

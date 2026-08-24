@@ -1,63 +1,94 @@
-import React, { useState } from "react";
-import { Navbar, Nav, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Hamburger from 'hamburger-react';
 import { BsFillSunFill, BsFillMoonStarsFill } from 'react-icons/bs';
+import { useDarkMode } from '@shared/state/DarkModeContext';
 import './style.scss';
-import { IconContext } from "react-icons/lib";
-import { useDarkMode } from "@shared/state/DarkModeContext";
 
-const Navigation: React.FC = () => {
-    const { isDarkMode, toggleDarkMode } = useDarkMode();
+const SECTION_LINKS = [
+  { hash: 'impact', label: 'Impact' },
+  { hash: 'skills', label: 'Toolkit' },
+  { hash: 'about', label: 'About' },
+  { hash: 'contact', label: 'Contact' },
+];
 
-    const [isClosed, setClosed] = useState(false)
+const PAGE_LINKS = [
+  { to: '/projects', label: 'Projects' },
+  { to: '/resume', label: 'Résumé' },
+];
 
-    return (
-        <Navbar className='bg-accent py-2 px-3 m-0 w-100' expand='lg'>
-            <Navbar.Brand href='/'>
-                <h1 className='text-secondary-light'>
-                    <span className='text-primary-light'>a-</span>
-                    thread
-                </h1>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls='basic-navbar-nav' className="text-white">
-                <Hamburger toggled={isClosed} toggle={setClosed} />
-            </Navbar.Toggle>
+const Navigation = () => {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
-            <Navbar.Collapse id='basic-navbar-nav'>
-                <Nav className='w-100 d-flex justify-content-end align-items-center'>
-                    <NavLink to='/' className={(navData) => navData.isActive ? ' selected' : ''}>
-                        home
-                    </NavLink>
-                    <NavLink to='/projects' className={(navData) => navData.isActive ? ' selected' : ''}>
-                        projects
-                    </NavLink>
-                    <NavLink to='/resume' className={(navData) => navData.isActive ? ' selected' : ''}>
-                        resume
-                    </NavLink>
-                    <div className='d-flex flex-end'>
-                        <Button
-                            aria-label="toggle dark mode"
-                            onClick={toggleDarkMode}
-                        >
-                            {isDarkMode ? (
-                                <IconContext.Provider
-                                    value={{ color: 'white' }}>
-                                    <BsFillSunFill />
-                                </IconContext.Provider>
-                            ) : (
-                                <IconContext.Provider
-                                    value={{ color: 'white' }}>
-                                    <BsFillMoonStarsFill />
-                                </IconContext.Provider>
-                            )}
-                            <span className="d-lg-none d-md-block">Switch Mode</span>
-                        </Button>
-                    </div>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    )
-}
+  const onHome = pathname === '/';
+  const close = () => setIsOpen(false);
+
+  // Plain `#hash` hrefs collide with HashRouter's own routing (it tries to
+  // match the fragment as a path and unmounts everything when it can't), so
+  // section links are handled entirely in JS: scroll directly when already on
+  // the home page, or navigate there and let HomePage scroll after mount.
+  const goToSection = (hash: string) => (event: React.MouseEvent) => {
+    event.preventDefault();
+    close();
+    if (onHome) {
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      navigate('/', { state: { scrollTo: hash } });
+    }
+  };
+
+  return (
+    <nav className="site-nav">
+      <div className="wrap inner">
+        <Link to="/" className="logo" onClick={close}>
+          <span>a</span>
+          <span className="logo-dot">&middot;</span>
+          <span className="logo-rest">thread</span>
+        </Link>
+
+        <div className="hamburger">
+          <Hamburger
+            toggled={isOpen}
+            toggle={setIsOpen}
+            size={22}
+            color="var(--text)"
+            label={isOpen ? 'Close menu' : 'Open menu'}
+          />
+        </div>
+
+        <div
+          id="site-nav-panel"
+          className={`panel${isOpen ? ' panel--open' : ''}`}
+        >
+          <div className="anchors">
+            {SECTION_LINKS.map(({ hash, label }) => (
+              <a key={hash} href="/" onClick={goToSection(hash)}>{label}</a>
+            ))}
+          </div>
+          <div className="divider" />
+          <div className="pages">
+            {PAGE_LINKS.map(({ to, label }) => (
+              <Link
+                key={to}
+                to={to}
+                className={`btn btn-secondary${pathname === to ? ' page--active' : ''}`}
+                aria-current={pathname === to ? 'page' : undefined}
+                onClick={close}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+          <button className="icon-btn" aria-label="toggle dark mode" onClick={toggleDarkMode}>
+            {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navigation;

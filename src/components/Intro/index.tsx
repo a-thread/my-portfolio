@@ -1,62 +1,55 @@
-import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { BsGithub } from 'react-icons/bs';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { ArrowUpRightIcon } from '../icons';
+import { SITE, emailHref } from '@shared/data/site';
 import './style.scss';
-import { Button } from 'react-bootstrap'
-import Typewriter from 'typewriter-effect';
-import { useDarkMode } from "@shared/state/DarkModeContext";
 
-const Intro: React.FC = () => {
-    const { isDarkMode } = useDarkMode();
-    const [imgFailed, setImgFailed] = useState(false);
-
-    const colorPhoto = "/images/aiden.png";
-    const contrastPhoto = "/images/headshot.png";
-
-    const reloadSrc = () => {
-        // If the theme-matched photo fails to load, fall back once to the
-        // other photo rather than looping or showing a mismatched theme.
-        if (!imgFailed) setImgFailed(true);
-    };
-
-    const activeSrc = imgFailed
-        ? (isDarkMode ? colorPhoto : contrastPhoto)
-        : (isDarkMode ? contrastPhoto : colorPhoto);
-
-    return (
-        <div className='intro bg-accent w-100 h-100 d-flex flex-column justify-content-center'>
-            <div className='d-flex flex-wrap align-items-center justify-content-center main-container'>
-                <div className='headshot-container'>
-                    {/* image */}
-                    <img src={activeSrc} onError={reloadSrc} className='img-fluid animate__animated animate__rollIn custom-shadow' alt='Headshot of Aiden' />
-                </div>
-                <div className='text-container'>
-                    {/* Intro title */}
-                    <h1 className='text-secondary-light intro-title animate__animated animate__backInLeft'>
-                        Hi, I'm <span className='text-primary-light'>Aiden.</span>
-                    </h1>
-                    {/* Typewriter effect*/}
-                    <h2 className='type-container text-secondary-light mt-3'>
-                        <Typewriter
-                            options={{
-                                strings: ['Senior Software Engineer', 'Angular & .NET / AWS', 'Building for Scale'],
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
-                    </h2>
-                    {/* Project button */}
-                    <Link to='/projects'>
-                        <Button variant='flat' className='mt-3 custom-shadow projects animate__animated animate__backInRight'> recent projects </Button>
-                    </Link>
-                </div>
-            </div>
-            {/* Bouncing arrow */}
-            <a href='#bio' aria-label='link to bio area'>
-                <div className='bg-accent arrow text-white text-center w-100 mt-10'>
-                    <i className='fas fa-chevron-down' />
-                </div>
+const Intro = () => {
+  return (
+    <div className="hero" id="hero">
+      <div className="wrap grid">
+        <div className="copy">
+          <div className="eyebrow">
+            <span className="eyebrow-mark" />
+            {SITE.role}
+          </div>
+          <h1 className="headline">
+            Full-stack systems,
+            <br />
+            built to <span className="accent">scale.</span>
+          </h1>
+          <p className="subhead">
+            I'm {SITE.name}. I specialize in full-stack development — reusable architectures, dynamic APIs, and scalable frontend frameworks — built on C#, TypeScript, Angular, .NET Core, and AWS.
+          </p>
+          <div className="ctas">
+            <Link to="/projects" className="btn btn-primary">
+              View projects
+              <ArrowUpRightIcon />
+            </Link>
+            <Link to="/resume" className="btn btn-secondary">Download résumé</Link>
+          </div>
+          <div className="socials">
+            <a className="icon-btn" aria-label="GitHub" href={SITE.github} target="_blank" rel="noreferrer">
+              <BsGithub />
             </a>
+            <a className="icon-btn" aria-label="LinkedIn" href={SITE.linkedin} target="_blank" rel="noreferrer">
+              <FaLinkedinIn />
+            </a>
+            <a className="icon-btn" aria-label="Email" href={emailHref}>
+              <MdEmail />
+            </a>
+          </div>
         </div>
-    )
-}
+        <div className="photo">
+          <div className="photo-tint" />
+          <img src="/images/headshot.png" alt={`Headshot of ${SITE.name}`} />
+          <div className="photo-badge mono">Angular &middot; .NET &middot; AWS</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default Intro;

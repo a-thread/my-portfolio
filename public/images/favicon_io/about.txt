@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Red Hat Text
-- Font Author: Copyright 2021 The Red Hat Project Authors (https://github.com/RedHatOfficial/RedHatFont)
-- Font Source: http://fonts.gstatic.com/s/redhattext/v6/RrQCbohi_ic6B3yVSzGBrMx6ZI_cy1A6Ok2ML4pwVrbacYVFtIY.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
+- Font Title: Space Grotesk
+- Font Author: undefined
+- Font Source: https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUUsjNsFjTDJK.ttf
+- Font License: undefined)

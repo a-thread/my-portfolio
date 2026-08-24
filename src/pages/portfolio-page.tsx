@@ -1,32 +1,57 @@
-import React from "react";
+import { useEffect } from 'react';
 import data from '@shared/data/data.json';
+import { SITE } from '@shared/data/site';
 import PortCard from '../components/PortCard';
-import './style.scss';
 import { IProject } from '../components/PortCard/project.model';
+import { ArrowUpRightIcon, FolderIcon } from '../components/icons';
 import Navigation from '../components/Navigation';
-import SideLinks from '../components/SideLinks';
 import Footer from '../components/Footer';
+import './style.scss';
 
-const PortfolioPage: React.FC = () => {
-    window.scrollTo(0, 0);
+const featuredTitles = ['Elysia', 'Lichen'];
+
+const PortfolioPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const projects = data as IProject[];
+    const featured = featuredTitles
+        .map((title) => projects.find((project) => project.title === title))
+        .filter((project): project is IProject => Boolean(project));
+    const moreCount = projects.length - featured.length;
+
     return (
         <>
             <Navigation />
-            <div className='project-container bg-accent p-2'>
-                <header className='d-flex justify-content-center'>
-                    <h1 className='text-secondary-light text-center'>Recent Projects</h1>
-                </header>
-                <div className='portfolio'>
-                    {data.map((project: IProject) => {
-
-                        return <PortCard {...project} />
-                    })}
+            <div className="projects-page">
+                <div className="wrap header">
+                    <div className="eyebrow"><span className="eyebrow-mark" />Selected work</div>
+                    <h1>Projects</h1>
+                    <p>Two personal projects I've built outside of work — the rest of my repositories are on GitHub.</p>
+                </div>
+                <div className="wrap grid">
+                    {featured.map((project) => (
+                        <PortCard {...project} key={project.id} />
+                    ))}
+                    <a
+                        className="more"
+                        href={SITE.github}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FolderIcon />
+                        <h3>{moreCount} more projects</h3>
+                        <p>View the full archive on GitHub</p>
+                        <span className="more-link">
+                            {SITE.githubHandle}
+                            <ArrowUpRightIcon size={13} />
+                        </span>
+                    </a>
                 </div>
             </div>
-            <SideLinks />
             <Footer />
         </>
     )
 };
 export default PortfolioPage;
-

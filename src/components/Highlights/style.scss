@@ -1,51 +1,64 @@
-div.highlightsContainer {
-    padding: 1rem 1rem 4rem 1rem;
+.highlights {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0;
+
+  @media screen and (min-width: 900px) {
+    padding: 100px 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media screen and (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  .card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
 
     h3 {
-        text-align: center;
-        margin: 20px 0 50px 0;
-        color: var(--color-accent);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    div.highlightsGrid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        max-width: 1100px;
-        margin: 0 auto;
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+  }
 
-        div {
-            width: 20rem;
-            text-align: center;
-            padding: 1.5rem 1rem;
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
 
-            h4 {
-                color: var(--color-accent);
-                font-size: 22px;
-                padding: 0;
-                margin: 10px 0;
-            }
-
-            p {
-                font-size: 17px;
-            }
-        }
-
-        span {
-            font-size: 42px;
-            padding: 10px;
-            color: var(--color-primary)
-        }
+    &--teal {
+      background: var(--tint-teal);
+      color: var(--teal-icon);
     }
 
-    @media screen and (max-width: 500px) {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        div.highlightsGrid div {
-            width: 100%;
-        }
+    &--sage {
+      background: var(--tint-sage);
+      color: var(--sage);
     }
+  }
 }
