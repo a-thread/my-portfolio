@@ -8,8 +8,8 @@ const Contact = () => {
   return (
     <div id="contact" className="contact-band">
       <div className="wrap contact-band__inner">
-        <SectionHeader eyebrow="Get in touch" heading="Let's build something great." align="center" className="contact-band__header" />
-        <p className="contact-band__lede">Open to senior/staff engineering roles and interesting collaborations.</p>
+        <SectionHeader eyebrow="Get in touch" heading="Let's build something remarkable." align="center" className="contact-band__header" />
+        <p className="contact-band__lede">Always up for interesting collaborations and conversations.</p>
         <a className="contact-band__email" href={emailHref}>{SITE.email}</a>
         <div className="contact-band__chips">
           <a className="contact-band__chip" href={SITE.phoneHref}>
