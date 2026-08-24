@@ -27,7 +27,11 @@ const Bio = () => {
             let a whole team move faster: defining frontend conventions that get
             adopted org-wide, leading migration patterns that become the team's
             reference implementation, and mentoring engineers through
-            architecture and code review. I thrive in fast-paced,
+            architecture and code review. That scope isn't limited to
+            greenfield work, either — I'm often the engineer trusted to
+            modernize legacy infrastructure without disrupting production, and
+            to turn one-off platform migrations into documented playbooks the
+            rest of the team can build on. I thrive in fast-paced,
             cross-functional environments and bring a mindset of curiosity and
             practical execution to building software that scales with purpose.
           </p>

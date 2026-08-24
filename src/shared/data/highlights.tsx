@@ -15,11 +15,11 @@ export const highlights: IHighlight[] = [
     ),
   },
   {
-    title: 'Real-Time Pipelines',
-    description: 'Re-architected a nightly batch process into a real-time AWS Lambda/SNS/S3 system.',
+    title: 'Infrastructure Ownership',
+    description: 'Extracted a shared Lambda into its own containerized service with dedicated Terraform-managed infrastructure, improving monitoring and system visibility.',
     tint: 'teal',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" /></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="6" rx="1.5" /><rect x="4" y="14" width="16" height="6" rx="1.5" /><path d="M8 7h.01M8 17h.01" /></svg>
     ),
   },
   {
@@ -39,11 +39,11 @@ export const highlights: IHighlight[] = [
     ),
   },
   {
-    title: 'Proactive Security',
-    description: 'Identified and escalated real security exposures — supply-chain risk, credential leaks, dependency-hardening gaps.',
+    title: 'Legacy Modernization',
+    description: 'Go-to engineer for legacy infrastructure — delivered surgical updates across a dozen+ programs without sacrificing production safety.',
     tint: 'sage',
     icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z" /><path d="m9 12 2 2 4-4" /></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l3 2" /><path d="M9 2h6" /></svg>
     ),
   },
   {
