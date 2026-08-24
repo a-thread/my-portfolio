@@ -9,28 +9,28 @@ import './style.scss';
 const Intro = () => {
   return (
     <div className="hero" id="hero">
-      <div className="wrap hero__grid">
-        <div className="hero__copy">
+      <div className="wrap grid">
+        <div className="copy">
           <div className="eyebrow">
             <span className="eyebrow-mark" />
             {SITE.role}
           </div>
-          <h1 className="hero__headline">
+          <h1 className="headline">
             Full-stack systems,
             <br />
-            built to <span className="hero__accent">scale.</span>
+            built to <span className="accent">scale.</span>
           </h1>
-          <p className="hero__subhead">
+          <p className="subhead">
             I'm {SITE.name}. I specialize in full-stack development — reusable architectures, dynamic APIs, and scalable frontend frameworks — built on C#, TypeScript, Angular, .NET Core, and AWS.
           </p>
-          <div className="hero__ctas">
+          <div className="ctas">
             <Link to="/projects" className="btn btn-primary">
               View projects
               <ArrowUpRightIcon />
             </Link>
             <Link to="/resume" className="btn btn-secondary">Download résumé</Link>
           </div>
-          <div className="hero__socials">
+          <div className="socials">
             <a className="icon-btn" aria-label="GitHub" href={SITE.github} target="_blank" rel="noreferrer">
               <BsGithub />
             </a>
@@ -42,10 +42,10 @@ const Intro = () => {
             </a>
           </div>
         </div>
-        <div className="hero__photo">
-          <div className="hero__photo-tint" />
+        <div className="photo">
+          <div className="photo-tint" />
           <img src="/images/headshot.png" alt={`Headshot of ${SITE.name}`} />
-          <div className="hero__photo-badge mono">Angular &middot; .NET &middot; AWS</div>
+          <div className="photo-badge mono">Angular &middot; .NET &middot; AWS</div>
         </div>
       </div>
     </div>

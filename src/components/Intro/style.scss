@@ -1,7 +1,7 @@
 .hero {
   background: var(--bg);
 
-  &__grid {
+  .grid {
     padding: 56px 24px 64px;
     display: flex;
     flex-direction: column-reverse;
@@ -16,7 +16,7 @@
     }
   }
 
-  &__headline {
+  .headline {
     font-size: 40px;
     line-height: 1.12;
     font-weight: 700;
@@ -29,11 +29,11 @@
     }
   }
 
-  &__accent {
+  .accent {
     color: var(--amber);
   }
 
-  &__subhead {
+  .subhead {
     font-size: 16.5px;
     line-height: 1.65;
     color: var(--text-muted);
@@ -44,20 +44,20 @@
     }
   }
 
-  &__ctas {
+  .ctas {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 32px;
   }
 
-  &__socials {
+  .socials {
     display: flex;
     gap: 12px;
     margin-top: 36px;
   }
 
-  &__photo {
+  .photo {
     position: relative;
     max-width: 340px;
     margin: 0 auto;
