@@ -56,6 +56,11 @@
     font-size: 13px;
     font-weight: 700;
     color: var(--text);
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--teal);
+    }
 
     &--muted {
       color: var(--text-muted);
