@@ -6,9 +6,9 @@ const Footer = () => {
 
   return (
     <footer className="site-footer">
-      <div className="wrap site-footer-inner">
+      <div className="wrap inner">
         <span>&copy; {year} {SITE.name} — built with React, TypeScript &amp; Vite</span>
-        <div className="site-footer-links">
+        <div className="links">
           <a href={SITE.github} target="_blank" rel="noreferrer">GitHub</a>
           <a href={SITE.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>

@@ -42,14 +42,14 @@ const Navigation = () => {
 
   return (
     <nav className="site-nav">
-      <div className="wrap site-nav-inner">
-        <Link to="/" className="site-nav-logo" onClick={close}>
+      <div className="wrap inner">
+        <Link to="/" className="logo" onClick={close}>
           <span>a</span>
-          <span className="site-nav-logo-dot">&middot;</span>
-          <span className="site-nav-logo-rest">thread</span>
+          <span className="logo-dot">&middot;</span>
+          <span className="logo-rest">thread</span>
         </Link>
 
-        <div className="site-nav-hamburger">
+        <div className="hamburger">
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}
@@ -61,20 +61,20 @@ const Navigation = () => {
 
         <div
           id="site-nav-panel"
-          className={`site-nav-panel${isOpen ? ' site-nav-panel--open' : ''}`}
+          className={`panel${isOpen ? ' panel--open' : ''}`}
         >
-          <div className="site-nav-anchors">
+          <div className="anchors">
             {SECTION_LINKS.map(({ hash, label }) => (
               <a key={hash} href="/" onClick={goToSection(hash)}>{label}</a>
             ))}
           </div>
-          <div className="site-nav-divider" />
-          <div className="site-nav-pages">
+          <div className="divider" />
+          <div className="pages">
             {PAGE_LINKS.map(({ to, label }) => (
               <Link
                 key={to}
                 to={to}
-                className={`btn btn-secondary${pathname === to ? ' site-nav-page--active' : ''}`}
+                className={`btn btn-secondary${pathname === to ? ' page--active' : ''}`}
                 aria-current={pathname === to ? 'page' : undefined}
                 onClick={close}
               >

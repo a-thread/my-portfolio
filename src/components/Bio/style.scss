@@ -8,7 +8,7 @@
     padding: 100px 0;
   }
 
-  &-grid {
+  .grid {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -20,7 +20,7 @@
     }
   }
 
-  &-header {
+  .header {
     margin-bottom: 0;
 
     h2 {
@@ -28,7 +28,7 @@
     }
   }
 
-  &-copy {
+  .copy {
     display: flex;
     flex-direction: column;
     gap: 20px;

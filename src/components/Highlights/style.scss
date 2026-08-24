@@ -8,7 +8,7 @@
     padding: 100px 0;
   }
 
-  &-grid {
+  .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -23,7 +23,7 @@
     }
   }
 
-  &-card {
+  .card {
     background: var(--surface-2);
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -42,7 +42,7 @@
     }
   }
 
-  &-icon {
+  .icon {
     width: 48px;
     height: 48px;
     border-radius: 12px;

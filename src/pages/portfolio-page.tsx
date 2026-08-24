@@ -25,17 +25,17 @@ const PortfolioPage = () => {
         <>
             <Navigation />
             <div className="projects-page">
-                <div className="wrap projects-page-header">
+                <div className="wrap header">
                     <div className="eyebrow"><span className="eyebrow-mark" />Selected work</div>
                     <h1>Projects</h1>
                     <p>Two personal projects I've built outside of work — the rest of my repositories are on GitHub.</p>
                 </div>
-                <div className="wrap projects-page-grid">
+                <div className="wrap grid">
                     {featured.map((project) => (
                         <PortCard {...project} key={project.id} />
                     ))}
                     <a
-                        className="projects-page-more"
+                        className="more"
                         href={SITE.github}
                         target="_blank"
                         rel="noreferrer"
@@ -43,7 +43,7 @@ const PortfolioPage = () => {
                         <FolderIcon />
                         <h3>{moreCount} more projects</h3>
                         <p>View the full archive on GitHub</p>
-                        <span className="projects-page-more-link">
+                        <span className="more-link">
                             {SITE.githubHandle}
                             <ArrowUpRightIcon size={13} />
                         </span>

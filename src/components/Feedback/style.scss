@@ -6,7 +6,7 @@
     padding: 100px 0;
   }
 
-  &-grid {
+  .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -17,7 +17,7 @@
     }
   }
 
-  &-card {
+  .card {
     background: var(--surface-2);
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -31,7 +31,7 @@
     }
   }
 
-  &-quote-mark {
+  .quote-mark {
     color: var(--teal);
     opacity: 0.65;
     margin-bottom: 14px;
