@@ -7,12 +7,12 @@
   }
 
   .grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 
     @media screen and (min-width: 900px) {
-      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
   }
@@ -22,6 +22,12 @@
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 28px;
+    flex: 1 1 100%;
+
+    @media screen and (min-width: 900px) {
+      flex: 0 1 calc(33.333% - 16px);
+      max-width: calc(33.333% - 16px);
+    }
 
     p {
       font-size: 15.5px;
