@@ -3,13 +3,13 @@
     "id": 10,
     "key": 10,
     "title": "Lichen",
-    "image": "/images/portfolio/lichen-web.png",
+    "image": "/images/portfolio/lichen.png",
     "description": "An offline-first notes app built with Angular 22 and Supabase. Write markdown-style notes — headings, checklists, bullet and numbered lists — that save instantly to your device and sync in the background the moment you're back online.",
     "email": "",
     "password": "",
     "tech": "Angular, Supabase, IndexedDB, SCSS, GitHub Pages",
-    "github": "https://github.com/a-thread/lichen-web",
-    "deployed": "https://a-thread.github.io/lichen-web/#/"
+    "github": "https://github.com/a-thread/lichen",
+    "deployed": "https://a-thread.github.io/lichen/#/"
   },
   {
     "id": 9,
