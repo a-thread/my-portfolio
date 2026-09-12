@@ -28,10 +28,11 @@ export const highlights: Highlight[] = [
       </svg>
     ),
   },
+  // Source: 8.20.26 Weekly Summary
   {
-    title: "Infrastructure Ownership",
+    title: "AI-Accelerated Modernization",
     description:
-      "Extracted a shared Lambda into its own containerized service with dedicated Terraform-managed infrastructure, improving monitoring and system visibility.",
+      "Built a custom automation skill and used it to migrate 18 legacy components (150+ files, ~9,000 lines) in a single afternoon.",
     tint: "teal",
     icon: (
       <svg
@@ -44,16 +45,18 @@ export const highlights: Highlight[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <rect x="4" y="4" width="16" height="6" rx="1.5" />
-        <rect x="4" y="14" width="16" height="6" rx="1.5" />
-        <path d="M8 7h.01M8 17h.01" />
+        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+        <path d="M21 3v5h-5" />
+        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+        <path d="M3 21v-5h5" />
       </svg>
     ),
   },
+  // Source: 8.31.26 Weekly Summary
   {
-    title: "Team Standards",
+    title: "AI Governance Tooling",
     description:
-      "Set frontend/SDLC standards adopted team-wide; led a state-management migration now used as the team's reference implementation.",
+      "Built a friction-analysis CLI that surfaced ~2.4 hours/week of avoidable approval delay and shipped it as a reusable tool for the team.",
     tint: "teal",
     icon: (
       <svg
@@ -66,16 +69,16 @@ export const highlights: Highlight[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <rect x="6" y="4" width="12" height="16" rx="2" />
-        <path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" />
-        <path d="m9 13 2 2 4-4" />
+        <path d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5l-8-3Z" />
+        <path d="m9 12 2 2 4-4" />
       </svg>
     ),
   },
+  // Source: 8.20.26 Weekly Summary
   {
-    title: "Responsible AI",
+    title: "Documentation at Scale",
     description:
-      "Selected for enterprise agentic-AI pilot programs; author governance and control documentation for responsible AI adoption.",
+      "Generated 40+ machine-verified reference docs for a company design system, type-checking every code example before publishing.",
     tint: "sage",
     icon: (
       <svg
@@ -88,8 +91,9 @@ export const highlights: Highlight[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <rect x="7" y="7" width="10" height="10" rx="1.5" />
-        <path d="M9 7V3M15 7V3M9 21v-4M15 21v-4M3 9h4M3 15h4M17 9h4M17 15h4" />
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z" />
+        <path d="M14 2v6h6" />
+        <path d="m9 15 2 2 4-4" />
       </svg>
     ),
   },
