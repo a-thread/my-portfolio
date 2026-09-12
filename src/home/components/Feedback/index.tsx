@@ -20,8 +20,11 @@ const Feedback = () => {
           heading="Kind words from colleagues"
         />
         <div className="grid">
-          {testimonials.map((quote) => (
-            <div className="card" key={quote}>
+          {testimonials.map((quote, index) => (
+            <div
+              className={`card${index === 0 ? " card--featured" : ""}`}
+              key={quote}
+            >
               <QuoteMark />
               <p>{quote}</p>
             </div>

@@ -37,6 +37,25 @@
     }
   }
 
+  .card--featured {
+    padding: 32px;
+    border-color: var(--teal);
+
+    @media screen and (min-width: 900px) {
+      flex: 0 1 calc(66.666% - 8px);
+      max-width: calc(66.666% - 8px);
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .quote-mark {
+      width: 32px;
+      height: 24px;
+    }
+  }
+
   .quote-mark {
     color: var(--teal);
     opacity: 0.65;
