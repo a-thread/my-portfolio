@@ -8,6 +8,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@shared': path.resolve(__dirname, 'src/shared'), // Matches tsconfig paths
+      '@home': path.resolve(__dirname, 'src/home'),
+      '@projects': path.resolve(__dirname, 'src/projects'),
+      '@resume': path.resolve(__dirname, 'src/resume'),
     },
   },
   build: {
