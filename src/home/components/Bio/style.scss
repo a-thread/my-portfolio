@@ -15,8 +15,8 @@
 
     @media screen and (min-width: 900px) {
       display: grid;
-      grid-template-columns: 360px 1fr;
-      gap: 80px;
+      grid-template-columns: 280px 1fr;
+      gap: 64px;
     }
   }
 
@@ -35,7 +35,7 @@
     font-size: 16px;
     line-height: 1.75;
     color: var(--text-muted);
-    max-width: 640px;
+    max-width: 720px;
 
     @media screen and (min-width: 900px) {
       font-size: 17px;
